@@ -1,0 +1,7 @@
+{
+  "default_strategy": "asof",
+  "default_tolerance_ms": 1000,
+  "default_timestamp_key": "timestamp",
+  "check_future_leak": true,
+  "check_stale_data": true
+}

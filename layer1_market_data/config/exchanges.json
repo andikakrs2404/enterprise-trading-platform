@@ -1,0 +1,11 @@
+{
+  "exchanges": [
+    {"name": "binance", "enabled": true, "url": "wss://stream.binance.com:9443", "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"], "timeout_ms": 10000},
+    {"name": "bybit", "enabled": true, "url": "wss://stream.bybit.com/v5/public", "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"], "timeout_ms": 10000},
+    {"name": "okx", "enabled": true, "url": "wss://ws.okx.com:8443/ws/v5/public", "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"], "timeout_ms": 10000}
+  ],
+  "default_symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"],
+  "reconnect_interval_ms": 5000,
+  "max_reconnect_attempts": 5,
+  "heartbeat_interval_ms": 30000
+}

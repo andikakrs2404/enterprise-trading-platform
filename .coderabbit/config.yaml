@@ -1,0 +1,125 @@
+# CodeRabbit Configuration
+# File: .coderabbit/config.yaml
+# Digunakan oleh CodeRabbit untuk melakukan AI code review otomatis
+
+# Project Info
+project:
+  name: "enterprise-trading-platform"
+  description: "Enterprise-grade cryptocurrency trading platform (Layered: L1 Market Data, L2 Data Lake, L3 Feature Engine)"
+  language: "python"
+  root_path: "."
+
+# Review Scope
+review:
+  # File/folder yang direview
+  include:
+    - "layer1_market_data/**/*.py"
+    - "layer2_data_lake/**/*.py"
+    - "layer2_data_lake/core/**/*.py"
+    - "layer3_feature_engine/**/*.py"
+    - "*.py"  # root scripts
+  
+  # File/folder yang di-exclude (boilerplate, cache, dll)
+  exclude:
+    - "**/__init__.py"
+    - "**/__pycache__/**"
+    - "**/__pycache__"
+    - "test_*.py"
+    - "*_test.py"
+    - "*.pyc"
+
+# Scoring Weights (sesuai user request)
+weights:
+  reliability: 0.30
+  security: 0.30
+  maintainability: 0.25
+  test_coverage: 0.15
+
+# Minimum Scores - jika di bawah ini, PR di-block
+min_scores:
+  reliability: 80
+  security: 80
+  maintainability: 75
+  test_coverage: 80
+
+# Kriteria Scoring Detail
+criteria:
+  reliability:
+    description: "Sistem bisa diandalkan: error handling, reconnect, timeout management"
+    checks:
+      - "error_handling"
+      - "reconnect_logic"
+      - "timeout_mgmt"
+      - "exception_catching"
+  
+  security:
+    description: "Keamanan data: prevent future leak, data corruption, injection"
+    checks:
+      - "future_leak_prevention"
+      - "data_validation"
+      - "input_sanitization"
+      - "secret_management"
+  
+  maintainability:
+    description: "Modular, readable, mudah di-extend"
+    checks:
+      - "modularity"
+      - "code_readability"
+      - "extensibility"
+      - "naming_conventions"
+  
+  test_coverage:
+    description: "Percent code yang tercover oleh unit test"
+    min_percent: 80
+
+# Algo Trading Specific Rules
+algo_trading:
+  # Timestamp alignment check (critical untuk backtest accuracy)
+  timestamp_alignment:
+    enabled: true
+    strategy: "asof"
+    check_direction: "backward"  # mencegah future leak
+    
+  # Data quality threshold
+  data_quality:
+    min_quality_score: 85
+    check_missing_candles: true
+    check_duplicates: true
+    check_spike_errors: true
+    
+  # Regime detection readiness
+  regime_detection:
+    required_features:
+      - "atr"
+      - "adx"
+      - "bb_width"
+      - "volume_ratio"
+
+# Auto-fix
+auto_fix:
+  enabled: true
+  max_iterations: 3
+  categories:
+    - "syntax"
+    - "type_hints"
+    - "docstrings"
+    - "style"
+
+# GitHub Integration
+github:
+  pr_review:
+    enabled: true
+    auto_review: true  # Review otomatis saat PR dibuat
+    comment_style: "inline"
+    report_location: "pr_comments"
+  
+  branch_rules:
+    main:
+      require_score: 85  # Merge hanya jika weighted score >= 85
+    feature:
+      require_score: 80  # Feature branch minimal 80
+
+# Notification
+notifications:
+  channel: "telegram"
+  notify_on: ["review_complete", "score_drop", "critical_issue"]

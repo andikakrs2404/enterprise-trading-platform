@@ -1,0 +1,7 @@
+{
+  "price_spike_threshold_pct": 3.0,
+  "max_price_change_pct": 50.0,
+  "max_timestamp_gap_ms": 300000,
+  "expected_candle_interval_ms": 60000,
+  "min_timestamp_tolerance_ms": 1000
+}
