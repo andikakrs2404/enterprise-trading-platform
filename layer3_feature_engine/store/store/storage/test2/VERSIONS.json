@@ -1,0 +1,18 @@
+{
+  "v1.0.1": {
+    "version": "v1.0.1",
+    "previous_version": "v1.0.0",
+    "timestamp": "2026-08-31T02:36:57.054261",
+    "symbol": "BTCUSDT",
+    "description": "",
+    "schema_version": "1.0.0",
+    "features_included": [
+      "atr",
+      "atr_ratio",
+      "bb_width",
+      "compression_score",
+      "regime",
+      "volume_ratio"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "feature_engine": {
+    "name": "enterprise-feature-engine",
+    "version": "1.0.0",
+    "description": "7-domain feature extraction for crypto futures (orthogonality-focused)"
+  },
+
+  "domains": {
+    "price_structure": {
+      "enabled": true,
+      "features": ["ret_1", "ret_5", "ret_24", "range_pct", "body_ratio", "hh_hl_structure"]
+    },
+    "volatility": {
+      "enabled": true,
+      "features": ["atr", "atr_ratio", "bb_width", "realized_vol"]
+    },
+    "volume": {
+      "enabled": true,
+      "features": ["volume_ratio", "dollar_volume", "volume_percentile"]
+    },
+    "participation": {
+      "enabled": true,
+      "features": ["oi_delta", "oi_pct", "funding"]
+    },
+    "trend": {
+      "enabled": true,
+      "features": ["ema_dist", "ema_slope", "adx", "regression_slope"]
+    },
+    "liquidity": {
+      "enabled": true,
+      "features": ["bid_ask_spread", "orderbook_imbalance", "depth"]
+    },
+    "regime": {
+      "enabled": true,
+      "features": ["compression_score", "trend_score", "expansion_score"]
+    }
+  },
+
+  "parameters": {
+    "atr_period": 14,
+    "atr_long_period": 100,
+    "bb_period": 20,
+    "bb_std": 2.0,
+    "ema_period": 50,
+    "volume_ma_period": 20,
+    "volume_percentile_window": 500,
+    "realized_vol_window": 14,
+    "regression_window": 20,
+    "oi_delta_period": 1,
+    "compression_atr_ratio_threshold": 0.7,
+    "compression_bb_width_threshold": 0.03,
+    "expansion_atr_ratio_threshold": 1.5
+  },
+
+  "store": {
+    "validation": {
+      "min_quality_score": 0.85,
+      "max_allowed_nan_fraction": 0.05,
+      "check_orthogonality": true,
+      "max_correlation_threshold": 0.95
+    },
+    "versioning": {
+      "enabled": true,
+      "auto_increment": true,
+      "schema_locked": true
+    },
+    "storage": {
+      "hot": "redis",
+      "cold": "parquet",
+      "archive": "s3"
+    }
+  }
+}
