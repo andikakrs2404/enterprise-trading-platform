@@ -10,3 +10,6 @@ dist/
 build/
 .env
 *.local
+*.jsonl
+VERSIONS.json
+store/store/storage/
