@@ -1,0 +1,33 @@
+L5 Alpha Engine Framework - Kontrak, Registry, State Machine, Edge #1 Compression
+
+P1.1-P1.6 (bangun framework dulu, jangan optimasi dulu):
+
+KONTRAK (interface seragam semua edge):
+- AlphaSignal: output ALPHA (bukan order) - tanpa qty/leverage/SL/order type
+  Tapi punya: direction, score, confidence, state, expected_return, expected_horizon, evidence
+- AlphaEngine: abstract interface evaluate(features, context, market_state) -> AlphaSignal
+- AlphaStateMachine: lifecycle OBSERVING->SETUP->QUALIFIED->TRIGGERED->ACTIVE->INVALIDATED->EXPIRED
+  (untuk riset predictive power: setup->trigger bars)
+- AlphaEvidence: attribution transparan (komponen individual, bukan black-box score)
+
+REGISTRY:
+- AlphaRegistry dengan metadata: id, family, required_features, required_context, timeframes, state
+- compression_breakout_v1 terdaftar (state=candidate)
+- config/alpha_registry.json
+
+EDGE #1 - COMPRESSION BREAKOUT V1:
+- Setup terpisah dari Trigger (compression qualified dulu, breakout baru signal)
+- Setup dipertahankan (retention) sampai breakout atau expire
+- Evidence: compression, volatility_compression, range_compression, volume_compression,
+  price_breakout, volume_expansion, oi_confirmation
+- Alpha quality: expected_return, expected_horizon, holding_period (bukan position size)
+
+BACKTESTER INTEGRATION:
+- AlphaBacktestRunner: L3 features -> L4 context -> L5 AlphaSignal -> backtester
+- Backtester konsumsi AlphaSignal (bukan order), tetap tidak hitung indikator
+
+HEALTH CHECK:
+- check_layer5_health.py: 10/10 PASS (kontrak, state machine, registry,
+  tidak-hitung-indikator, setup-vs-trigger, evidence, quality, backtest)
+
+Catatan: PF synthetic TIDAK disentuh (integrasi test saja). Data nyata menyusul di P1.7.

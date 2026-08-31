@@ -1,0 +1,25 @@
+{
+  "compression_breakout_v1": {
+    "id": "compression_breakout_v1",
+    "family": "volatility",
+    "required_features": [
+      "atr_ratio",
+      "bb_width",
+      "volume_ratio",
+      "volume_percentile",
+      "oi_delta"
+    ],
+    "required_context": [
+      "compression_components",
+      "volatility_state"
+    ],
+    "timeframes": [
+      "5m",
+      "15m",
+      "1h"
+    ],
+    "version": "1.0.0",
+    "state": "candidate",
+    "description": "Compression setup \u2192 breakout trigger (Edge #1)"
+  }
+}
