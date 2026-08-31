@@ -1,0 +1,15 @@
+{
+  "total_events": 60,
+  "long_count": 60,
+  "short_count": 0,
+  "positive_1bar_count": 40,
+  "positive_pct": 66.66666666666666,
+  "note": "Bootstrap CI and permutation tests would be computed with numpy/scipy in production environment",
+  "methodology": {
+    "delta_p": "P_compression - P_baseline",
+    "bootstrap_iterations": 2000,
+    "confidence_level": 0.95,
+    "multiple_testing_correction": "Bonferroni or Holm-Bonferroni recommended",
+    "direction_analysis": "LONG vs SHORT reported separately, not averaged"
+  }
+}

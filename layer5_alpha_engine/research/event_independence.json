@@ -1,0 +1,19 @@
+{
+  "total_triggers": 60,
+  "episodes_deduplicated": 60,
+  "cooldown_bars_applied": 20,
+  "multiple_testing": {
+    "total_raw_tests": 7,
+    "bonferroni_alpha": 0.0071428571428571435,
+    "tests_detail": {
+      "compression_vs_baseline_a": 1,
+      "compression_vs_baseline_c": 1,
+      "direction_long_vs_short": 0,
+      "horizon_1bar": 1,
+      "horizon_3bar": 1,
+      "horizon_6bar": 1,
+      "horizon_12bar": 1,
+      "horizon_24bar": 1
+    }
+  }
+}
