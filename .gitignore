@@ -13,3 +13,4 @@ build/
 *.jsonl
 VERSIONS.json
 store/store/storage/
+backtester/last_backtest_summary.json
