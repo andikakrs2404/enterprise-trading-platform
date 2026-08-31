@@ -1,0 +1,48 @@
+{
+  "regime_classifier": {
+    "name": "enterprise-context-engine",
+    "version": "1.0.0",
+    "description": "Layer 4 - Menentukan regime PASKA menerima komponen context dari Layer 3"
+  },
+  "classifier": {
+    "type": "rule_based",
+    "methods": {
+      "compression": {
+        "primary": "compression_score",
+        "components": ["volatility_compression", "range_compression", "volume_compression"],
+        "threshold": 0.6
+      },
+      "volatility_expansion": {
+        "primary": "expansion_score",
+        "threshold": 0.6
+      },
+      "trending": {
+        "primary": "trend_score",
+        "threshold_abs": 0.5,
+        "strength_min": 0.5
+      },
+      "range": {
+        "fallback": true,
+        "description": "Jika bukan compression/expansion/trend, maka range"
+      }
+    }
+  },
+  "regimes": {
+    "TRENDING": {
+      "description": "Trend kuat, gunakan trend-following edge",
+      "allowed_edges": ["trend", "momentum"]
+    },
+    "COMPRESSION": {
+      "description": "Volatilitas menyempit, siap breakout",
+      "allowed_edges": ["compression_breakout"]
+    },
+    "VOLATILITY_EXPANSION": {
+      "description": "Volatilitas meletus, momentum kuat",
+      "allowed_edges": ["volatility", "momentum"]
+    },
+    "RANGE": {
+      "description": "Sideways, gunakan mean reversion",
+      "allowed_edges": ["mean_reversion"]
+    }
+  }
+}
