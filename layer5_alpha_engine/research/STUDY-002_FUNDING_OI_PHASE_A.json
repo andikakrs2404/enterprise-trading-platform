@@ -1,0 +1,243 @@
+{
+  "study": "STUDY-002-FUNDING-OI-PHASE-A",
+  "status": "EXPLORATORY/NON-ALPHA",
+  "parent": "STUDY-002",
+  "goal": "Phenomenon discovery - BUKAN strategy search",
+  "guardrails": [
+    "no threshold selection",
+    "no TP/SL opt",
+    "no train/val/test state selection",
+    "no MTC on descriptive states",
+    "label=observed phenomenon unregistered"
+  ],
+  "n_symbols": 39,
+  "n_rows": 717518,
+  "n_tagged": 714787,
+  "distributions": {
+    "funding_raw": {
+      "mean": 1.54e-05,
+      "P5": -0.000197,
+      "P50": 5e-05,
+      "P95": 0.0001
+    },
+    "oi_change_pct": {
+      "mean": Infinity,
+      "P5": -1.0256,
+      "P50": -0.0124,
+      "P95": 1.0668
+    },
+    "missing": {
+      "oi_avail_pct": 99.6,
+      "funding_avail_pct": 99.8
+    }
+  },
+  "states_3d": [
+    {
+      "funding": "FUND_LOW",
+      "oi": "OI_LOW",
+      "price": "UP",
+      "n": 35992,
+      "E_R1": -0.0042,
+      "E_R3": 0.0071,
+      "E_R6": 0.0524,
+      "E_R12": 0.0944,
+      "E_R24": 0.1202
+    },
+    {
+      "funding": "FUND_LOW",
+      "oi": "OI_LOW",
+      "price": "DOWN",
+      "n": 36174,
+      "E_R1": 0.017,
+      "E_R3": 0.0446,
+      "E_R6": 0.0501,
+      "E_R12": 0.1101,
+      "E_R24": 0.2671
+    },
+    {
+      "funding": "FUND_LOW",
+      "oi": "OI_MID",
+      "price": "UP",
+      "n": 37271,
+      "E_R1": -0.0022,
+      "E_R3": -0.019,
+      "E_R6": -0.0041,
+      "E_R12": 0.0104,
+      "E_R24": 0.0254
+    },
+    {
+      "funding": "FUND_LOW",
+      "oi": "OI_MID",
+      "price": "DOWN",
+      "n": 37258,
+      "E_R1": -0.0028,
+      "E_R3": 0.0007,
+      "E_R6": -0.0078,
+      "E_R12": 0.0182,
+      "E_R24": 0.0895
+    },
+    {
+      "funding": "FUND_LOW",
+      "oi": "OI_HIGH",
+      "price": "UP",
+      "n": 40001,
+      "E_R1": -0.0048,
+      "E_R3": 0.0008,
+      "E_R6": 0.0235,
+      "E_R12": 0.0578,
+      "E_R24": 0.0128
+    },
+    {
+      "funding": "FUND_LOW",
+      "oi": "OI_HIGH",
+      "price": "DOWN",
+      "n": 40527,
+      "E_R1": 0.0044,
+      "E_R3": 0.0078,
+      "E_R6": 0.0101,
+      "E_R12": 0.0022,
+      "E_R24": 0.021
+    },
+    {
+      "funding": "FUND_MID",
+      "oi": "OI_LOW",
+      "price": "UP",
+      "n": 33714,
+      "E_R1": -0.0077,
+      "E_R3": -0.0222,
+      "E_R6": -0.0233,
+      "E_R12": -0.0617,
+      "E_R24": -0.1233
+    },
+    {
+      "funding": "FUND_MID",
+      "oi": "OI_LOW",
+      "price": "DOWN",
+      "n": 33838,
+      "E_R1": -0.0016,
+      "E_R3": -0.0153,
+      "E_R6": -0.0539,
+      "E_R12": -0.0989,
+      "E_R24": -0.1287
+    },
+    {
+      "funding": "FUND_MID",
+      "oi": "OI_MID",
+      "price": "UP",
+      "n": 32028,
+      "E_R1": -0.0019,
+      "E_R3": -0.024,
+      "E_R6": -0.0254,
+      "E_R12": -0.0442,
+      "E_R24": -0.0828
+    },
+    {
+      "funding": "FUND_MID",
+      "oi": "OI_MID",
+      "price": "DOWN",
+      "n": 32974,
+      "E_R1": -0.0049,
+      "E_R3": 0.0083,
+      "E_R6": -0.0233,
+      "E_R12": -0.044,
+      "E_R24": -0.0499
+    },
+    {
+      "funding": "FUND_MID",
+      "oi": "OI_HIGH",
+      "price": "UP",
+      "n": 32937,
+      "E_R1": -0.0003,
+      "E_R3": -0.0235,
+      "E_R6": -0.0395,
+      "E_R12": -0.0596,
+      "E_R24": -0.1276
+    },
+    {
+      "funding": "FUND_MID",
+      "oi": "OI_HIGH",
+      "price": "DOWN",
+      "n": 33354,
+      "E_R1": -0.0067,
+      "E_R3": -0.0067,
+      "E_R6": -0.0284,
+      "E_R12": -0.0406,
+      "E_R24": -0.1293
+    },
+    {
+      "funding": "FUND_HIGH",
+      "oi": "OI_LOW",
+      "price": "UP",
+      "n": 46473,
+      "E_R1": -0.0112,
+      "E_R3": -0.0124,
+      "E_R6": 0.0102,
+      "E_R12": -0.0182,
+      "E_R24": 0.0212
+    },
+    {
+      "funding": "FUND_HIGH",
+      "oi": "OI_LOW",
+      "price": "DOWN",
+      "n": 47163,
+      "E_R1": 0.0213,
+      "E_R3": 0.0318,
+      "E_R6": 0.0253,
+      "E_R12": 0.0658,
+      "E_R24": -0.0289
+    },
+    {
+      "funding": "FUND_HIGH",
+      "oi": "OI_MID",
+      "price": "UP",
+      "n": 46219,
+      "E_R1": -0.0068,
+      "E_R3": -0.0291,
+      "E_R6": -0.0208,
+      "E_R12": -0.0806,
+      "E_R24": -0.0957
+    },
+    {
+      "funding": "FUND_HIGH",
+      "oi": "OI_MID",
+      "price": "DOWN",
+      "n": 46960,
+      "E_R1": -0.0019,
+      "E_R3": 0.0173,
+      "E_R6": -0.0098,
+      "E_R12": -0.0265,
+      "E_R24": -0.1551
+    },
+    {
+      "funding": "FUND_HIGH",
+      "oi": "OI_HIGH",
+      "price": "UP",
+      "n": 44465,
+      "E_R1": 0.0005,
+      "E_R3": -0.0219,
+      "E_R6": -0.008,
+      "E_R12": -0.046,
+      "E_R24": 0.0157
+    },
+    {
+      "funding": "FUND_HIGH",
+      "oi": "OI_HIGH",
+      "price": "DOWN",
+      "n": 45461,
+      "E_R1": -0.0066,
+      "E_R3": 0.0005,
+      "E_R6": -0.0345,
+      "E_R12": -0.0489,
+      "E_R24": -0.069
+    }
+  ],
+  "n_explorations": 18,
+  "baseline_all": {
+    "R1": -0.0009,
+    "R6": -0.0056,
+    "R24": -0.0243
+  },
+  "note": "Fenomena menonjol = OBSERVED - unregistered. Belum pre-registered.",
+  "candidate_for_phase_b": [],
+  "negative_findings": []
+}
