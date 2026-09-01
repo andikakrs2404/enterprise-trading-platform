@@ -1,0 +1,83 @@
+{
+  "study": "STUDY-002-VERIFICATION",
+  "state": "FUND_LOW+OI_LOW",
+  "status": "eksplorasi (bukan pre-registration)",
+  "cross_symbol": {
+    "n_symbols": 39,
+    "n_positive_R24": 27,
+    "n_negative_R24": 12,
+    "median_R24": 0.1858,
+    "mean_R24": 0.1909,
+    "IQR": [
+      -0.0391,
+      0.3668
+    ],
+    "top5": [
+      {
+        "sym": "OPUSDT",
+        "R24": 0.9231,
+        "n": 1081
+      },
+      {
+        "sym": "RNDRUSDT",
+        "R24": 0.7556,
+        "n": 60
+      },
+      {
+        "sym": "ORDIUSDT",
+        "R24": 0.7269,
+        "n": 2679
+      },
+      {
+        "sym": "SUIUSDT",
+        "R24": 0.701,
+        "n": 2736
+      },
+      {
+        "sym": "BCHUSDT",
+        "R24": 0.6856,
+        "n": 2376
+      }
+    ],
+    "bottom5": [
+      {
+        "sym": "ADAUSDT",
+        "R24": -0.1345,
+        "n": 1914
+      },
+      {
+        "sym": "SEIUSDT",
+        "R24": -0.1571,
+        "n": 1716
+      },
+      {
+        "sym": "LDOUSDT",
+        "R24": -0.2176,
+        "n": 1715
+      },
+      {
+        "sym": "NEARUSDT",
+        "R24": -0.3563,
+        "n": 2483
+      },
+      {
+        "sym": "SOLUSDT",
+        "R24": -0.5739,
+        "n": 1690
+      }
+    ]
+  },
+  "event_distribution": {
+    "min": 60,
+    "median": 1830,
+    "max": 3042,
+    "mean": 1872.0,
+    "top3_pct": 11.9
+  },
+  "horizon_robustness": {
+    "fully_monotonic": 14,
+    "partial": 5,
+    "no_pattern": 20
+  },
+  "verdict": "WEAK PHENOMENON - perlu lebih banyak data sebelum pre-register"
+}
