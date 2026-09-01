@@ -1,0 +1,8 @@
+{
+  "sign_test_pvalue": 0.023702702470473014,
+  "sign_test_lolos": true,
+  "loso_majority_count": true,
+  "loso_total": 39,
+  "governance_status": "Observed Phenomenon \u2014 Tentatively Robust, Mechanism Unknown",
+  "governance_recommendation": "Jalankan Phase B jika sign test lolos (p < 0.05) AND leave-one-symbol-out mayoritas > 60%. BUKAN lanjutkan sekalipun salah satu gagal. Cap bucket butuh review manual."
+}
