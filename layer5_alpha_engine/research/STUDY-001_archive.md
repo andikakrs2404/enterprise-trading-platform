@@ -182,3 +182,50 @@ MFE/MAE decay profile terkonfirmasi di universe luas:
 | `track_b_trend_continuation.json` | Hasil Track B (5 simbol) |
 | `replication_39symbol.json` | Replication study (39 simbol) |
 | `adx_quantile_study.json` | ADX quantile/decile study |
+
+---
+
+## STUDY-001-MECHANISM (2026-09-01) — Post-Mortem Mekanisme
+
+**Status:** EXPLORATORY / NON-ALPHA
+**Parent:** STUDY-001 | **Entry:** FROZEN (no optimization)
+
+### Hasil (39 simbol, 804 events, LONG 362 / SHORT 442)
+
+**1. Time-to-Peak:**
+- Time-to-MFE: median 8 bar (P25=2, P75=19)
+- Time-to-MAE: median 14 bar (P25=4, P75=22)
+- 33.5% MFE peak dalam 1-3 bar, 25% MAE peak dalam 1-3 bar
+
+**2. Return Decay E[R|t] (pooled):**
+| t | E[R|t] |
+|---|--------|
+| 1 | +0.098% |
+| 2 | +0.126% |
+| 4 | +0.122% |
+| 8 | +0.052% |
+| 12 | -0.138% |
+| 24 | -0.279% |
+
+**3. MFE/MAE Asymmetry (median ratio per horizon):**
+- t=6: 0.32, t=12: 0.44, t=24: 0.60 → median < 1 (MAE > MFE)
+- Distribution skewed (P90 tinggi, median < 1)
+
+**4. Time-to-Reversal (TEMUAN TERKUAT):**
+- Median 2 bar setelah MFE peak (P25=1, P75=4)
+- **74% reversal dalam 1-3 bar**
+
+**5. Excursion Conditional:**
+- MFE(3bar)>0: 64.4% → forward 6/12/24 selalu positif (+0.78/+0.63/+0.51)
+- MFE(3bar)<=0: 35.6% → forward 6/12/24 selalu negatif (-1.32/-1.52/-1.71)
+
+### Kesimpulan Mekanistik (NON-ALPHA)
+- Return decay + MFE/MAE simetris → cenderung menjelaskan **volatility expansion biasa**, bukan positive expectancy
+- Pattern: **initial continuation (impulse 1-8 bar) → flow exhaustion → reversal (12-24 bar)**
+- Persistence ada (MFE3>0 → forward positif), tapi tidak cukup untuk mengalahkan 8bps fee
+- **TIDAK ADA kesimpulan deployable.** No TP/SL/entry optimization dilakukan (guardrail).
+
+### Nota Kesetaraan dengan Literatur
+Pattern "initial continuation → reversal" konsisten dengan literatur 2026 momentum/reversal
+coexistence pada horizon pendek di commodity futures (flow component vs residual component).
+STUDY-001 bukan anomaly aneh — kemungkinan fenomena umum market microstructure.
