@@ -6,10 +6,64 @@
   "positive_pct": 66.66666666666666,
   "note": "Bootstrap CI and permutation tests would be computed with numpy/scipy in production environment",
   "methodology": {
-    "delta_p": "P_compression - P_baseline",
+    "delta_p": "P(breakout|compression) - P(breakout|baseline)",
     "bootstrap_iterations": 2000,
     "confidence_level": 0.95,
-    "multiple_testing_correction": "Bonferroni or Holm-Bonferroni recommended",
-    "direction_analysis": "LONG vs SHORT reported separately, not averaged"
+    "multiple_testing": {
+      "fixed_number": false,
+      "actual_hypotheses": "terdapat dari hypothesis registry",
+      "correction_method": "pilih: Bonferroni | Holm | Sidak | FDR",
+      "adjusted_alpha": "dihitung berdasarkan actual hypotheses count"
+    },
+    "direction_analysis": {
+      "long_separate": "LONG effect dilaporkan terpisah dari SHORT",
+      "short_separate": "SHORT effect dilaporkan terpisah dari LONG",
+      "insufficient_direction": "Jika LONG atau SHORT insufficient \u2192 INCONCLUSIVE untuk direction tersebut"
+    },
+    "mfe_mae": {
+      "per_horizon": "MFE/MAE dihitung per horizon (1h/3h/6h/12h/24h)",
+      "gross_vs_net": "Laporan gross return sebelum fee, net return setelah fee/slippage",
+      "effect_size": "Dilaporkan bersama absolute_delta dan relative_lift"
+    },
+    "effect_size_focus": "absolute_delta (pp), relative_lift (%), odds_ratio, bukan sekadar significance"
+  },
+  "multiple_testing_info": {
+    "fixed_7_tests": false,
+    "actual_count": null,
+    "report_hypotheses": "daftar hypotheses yang benar-benar diuji"
+  },
+  "p17_methods": {
+    "execution_realism": {
+      "spread_consideration": true,
+      "fee_slippage_calculation": true,
+      "funding_rate": true,
+      "market_impact": true,
+      "gross_to_net_edge": true
+    },
+    "walk_forward_layer": {
+      "train_percent": 60,
+      "validation_percent": 20,
+      "test_percent": 20,
+      "purged_walk_forward": true,
+      "prevents_temporal_leakage": true
+    },
+    "research_bias_layer": {
+      "deflated_sharpe_ratio": true,
+      "probabilistic_sharpe_ratio": true,
+      "selection_bias_adjustment": true
+    },
+    "capacity_layer": {
+      "liquidity_filter": true,
+      "scalability_score": true,
+      "max_capital_at_pf_threshold": true,
+      "position_sizing_limit": true
+    },
+    "alpha_monitoring_layer": {
+      "rolling_pf": true,
+      "rolling_sharpe": true,
+      "rolling_hit_rate": true,
+      "decay_detection": true,
+      "automatic_retirement_criteria": true
+    }
   }
 }

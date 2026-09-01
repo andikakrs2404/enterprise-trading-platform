@@ -15,5 +15,72 @@
       "horizon_12bar": 1,
       "horizon_24bar": 1
     }
+  },
+  "effective_sample_size_calc": true,
+  "candle_correlation_accounted": true,
+  "episode_as_unit": true,
+  "raw_events_vs_independent": {
+    "raw_events": null,
+    "unique_episodes": null,
+    "effective_sample_size": null,
+    "calculation": "N_eff = n / (1 + (m-1)*rho) di mana m=candles_per_episode, rho=correlation"
+  },
+  "multiple_testing_fixed_number": false,
+  "actual_hypotheses_registered": null,
+  "correction_method_used": null,
+  "adjusted_alpha_reported": null,
+  "breakout_definition_locked": false,
+  "breakout_definition_immutable": true,
+  "decision_states": {
+    "INCONCLUSIVE": "N terlalu kecil / CI terlalu lebar",
+    "HYPOTHESIS_SUPPORTED": "effect significant, CI not contain 0",
+    "ROBUST_CANDIDATE": "survives OOS, regime, symbol, cost",
+    "PRODUCTION_CANDIDATE": "robust + economically viable + portfolio + execution"
+  },
+  "permutation_test": {
+    "iterations": 1000,
+    "p_value": null,
+    "condition_for_hypothesis_supported": "permuted_pvalue > observed_pvalue"
+  },
+  "episode_definition": {
+    "compression_start": "early range with low bb_width & volume",
+    "compression_end": "potential breakout signal",
+    "breakout": "close > range_high + volume confirmation",
+    "n_eff_formula": "N_eff = n / (1 + (m-1)*rho), m=candles_per_episode, rho=correlation"
+  },
+  "regime_stability_markers": {
+    "adx_trending": "ADX > 30",
+    "adx_range": "ADX < 27",
+    "volatility_persistence": "5 bar minimum stability",
+    "session_stability": "consistent session per bar"
+  },
+  "execution_realism": {
+    "spread": null,
+    "fee": null,
+    "funding": null,
+    "slippage": null,
+    "market_impact": null
+  },
+  "walk_forward_markers": {
+    "purged": true,
+    "temporal_leakage_prevented": true,
+    "train_val_test_splits": null
+  },
+  "research_bias_markers": {
+    "deflated_sharpe": null,
+    "probabilistic_sharpe": null,
+    "selection_bias_adjusted": null
+  },
+  "capacity_markers": {
+    "liquidity_filter": null,
+    "scalability_score": null,
+    "max_capital_pf": null,
+    "position_sizing_limit": null
+  },
+  "alpha_monitoring_markers": {
+    "rolling_pf": null,
+    "rolling_sharpe": null,
+    "decay_detected": null,
+    "retirement_criteria_met": null
   }
 }

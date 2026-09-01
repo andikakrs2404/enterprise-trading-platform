@@ -1,0 +1,9 @@
+{
+  "p_compression": 0.4945,
+  "p_baseline": 0.511,
+  "absolute_delta_pp": -1.65,
+  "relative_lift_pct": -3.24,
+  "odds_ratio": 0.936,
+  "n_compression": 544,
+  "n_baseline": 544
+}

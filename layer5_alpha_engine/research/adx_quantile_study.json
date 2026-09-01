@@ -1,0 +1,128 @@
+{
+  "analysis": "P1.7 Priority1+2",
+  "total_triggers": 681,
+  "adx_quantiles": {
+    "15-20": {
+      "n": 76,
+      "gross_exp": -0.0119,
+      "net_exp": -0.0919,
+      "net_pf": 0.748,
+      "tstat": -0.106,
+      "hit": 46.1,
+      "long": 41,
+      "short": 35
+    },
+    "20-25": {
+      "n": 94,
+      "gross_exp": 0.0758,
+      "net_exp": -0.0042,
+      "net_pf": 0.986,
+      "tstat": 0.939,
+      "hit": 50.0,
+      "long": 43,
+      "short": 51
+    },
+    "25-30": {
+      "n": 97,
+      "gross_exp": 0.1904,
+      "net_exp": 0.1104,
+      "net_pf": 1.354,
+      "tstat": 1.202,
+      "hit": 47.4,
+      "long": 46,
+      "short": 51
+    },
+    "30-35": {
+      "n": 89,
+      "gross_exp": 0.108,
+      "net_exp": 0.028,
+      "net_pf": 1.094,
+      "tstat": 1.166,
+      "hit": 51.7,
+      "long": 44,
+      "short": 45
+    },
+    "35-40": {
+      "n": 98,
+      "gross_exp": 0.0914,
+      "net_exp": 0.0114,
+      "net_pf": 1.038,
+      "tstat": 0.969,
+      "hit": 50.0,
+      "long": 40,
+      "short": 58
+    },
+    "40-45": {
+      "n": 80,
+      "gross_exp": 0.3491,
+      "net_exp": 0.2691,
+      "net_pf": 2.368,
+      "tstat": 2.442,
+      "hit": 55.0,
+      "long": 42,
+      "short": 38
+    },
+    "45-60": {
+      "n": 85,
+      "gross_exp": 0.0079,
+      "net_exp": -0.0721,
+      "net_pf": 0.763,
+      "tstat": 0.099,
+      "hit": 48.2,
+      "long": 33,
+      "short": 52
+    }
+  },
+  "subset_trending_adx35_oi0": {
+    "n": 53,
+    "gross_exp": 0.2514,
+    "net_exp": 0.1714,
+    "net_pf": 1.901,
+    "tstat": 2.345,
+    "hit": 54.7,
+    "long": 23,
+    "short": 30
+  },
+  "split": {
+    "train": {
+      "n": 31,
+      "gross_exp": 0.2212,
+      "net_exp": 0.1412,
+      "net_pf": 1.996,
+      "tstat": 2.174,
+      "hit": 64.5,
+      "long": 13,
+      "short": 18
+    },
+    "val": {
+      "n": 11,
+      "gross_exp": 0.0801,
+      "net_exp": 0.0001,
+      "net_pf": 1.0,
+      "tstat": 0.249,
+      "hit": 27.3,
+      "long": 4,
+      "short": 7
+    },
+    "test": {
+      "n": 11,
+      "gross_exp": 0.5077,
+      "net_exp": 0.4277,
+      "net_pf": 3.56,
+      "tstat": 1.718,
+      "hit": 54.5,
+      "long": 6,
+      "short": 5
+    }
+  },
+  "contrast_rest": {
+    "n": 628,
+    "gross_exp": 0.081,
+    "net_exp": 0.001,
+    "net_pf": 1.003,
+    "tstat": 1.922,
+    "hit": 48.2,
+    "long": 293,
+    "short": 335
+  }
+}

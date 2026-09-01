@@ -38,5 +38,62 @@
     "median_return": 0.3294,
     "n": 60,
     "positive_pct": 60.0
+  },
+  "return_separation": {
+    "gross_return": null,
+    "net_return": null
+  },
+  "effect_size": {
+    "absolute_delta": null,
+    "relative_lift": null,
+    "odds_ratio": null
+  },
+  "decision_states": {
+    "INCONCLUSIVE": "N terlalu kecil / CI terlalu lebar",
+    "HYPOTHESIS_SUPPORTED": "effect significant",
+    "ROBUST_CANDIDATE": "survives OOS/regime/cost",
+    "PRODUCTION_CANDIDATE": "robust + economic viable"
+  },
+  "horizon_analysis": {
+    "forward_1bar": {
+      "mfe": 1.9883,
+      "mae": -0.9894,
+      "mean_return": 0.564315,
+      "median_return": 0.655,
+      "n": 60,
+      "positive_pct": 66.66666666666666
+    },
+    "forward_3bar": {
+      "mfe": 1.9926,
+      "mae": -0.9416,
+      "mean_return": 0.4403816666666669,
+      "median_return": 0.6181,
+      "n": 60,
+      "positive_pct": 60.0
+    },
+    "forward_6bar": {
+      "mfe": 1.9617,
+      "mae": -0.971,
+      "mean_return": 0.4418750000000001,
+      "median_return": 0.5683,
+      "n": 60,
+      "positive_pct": 68.33333333333333
+    },
+    "forward_12bar": {
+      "mfe": 1.9978,
+      "mae": -0.7743,
+      "mean_return": 0.5207116666666668,
+      "median_return": 0.3612,
+      "n": 60,
+      "positive_pct": 60.0
+    },
+    "forward_24bar": {
+      "mfe": 1.9954,
+      "mae": -0.9983,
+      "mean_return": 0.4302066666666666,
+      "median_return": 0.3294,
+      "n": 60,
+      "positive_pct": 60.0
+    }
   }
 }

@@ -1,0 +1,83 @@
+{
+  "replication_study": true,
+  "n_symbols": 39,
+  "n_triggers_total": 804,
+  "temporal_split": {
+    "TRAIN": {
+      "n": 357,
+      "gross_exp": 0.227,
+      "net_exp": 0.147,
+      "net_pf": 1.373,
+      "tstat": 2.429,
+      "pval": 0.0151
+    },
+    "VAL": {
+      "n": 180,
+      "gross_exp": 0.0151,
+      "net_exp": -0.0649,
+      "net_pf": 0.84,
+      "tstat": 0.183,
+      "pval": 0.8544
+    },
+    "TEST": {
+      "n": 267,
+      "gross_exp": -0.0171,
+      "net_exp": -0.0971,
+      "net_pf": 0.783,
+      "tstat": -0.231,
+      "pval": 0.8175
+    }
+  },
+  "oos": {
+    "n": 447,
+    "gross_exp": -0.0041,
+    "net_exp": -0.0841,
+    "net_pf": 0.805,
+    "tstat": -0.075,
+    "pval": 0.9403
+  },
+  "symbol_oos_positive": [
+    "AAVEUSDT",
+    "ARBUSDT",
+    "ATOMUSDT",
+    "BNBUSDT",
+    "DOTUSDT",
+    "ETCUSDT",
+    "FETUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "RUNEUSDT",
+    "SEIUSDT",
+    "SUIUSDT",
+    "UNIUSDT",
+    "XRPUSDT"
+  ],
+  "symbol_oos_negative": [
+    "ADAUSDT",
+    "APTUSDT",
+    "AVAXUSDT",
+    "BCHUSDT",
+    "BTCUSDT",
+    "CRVUSDT",
+    "DOGEUSDT",
+    "DYDXUSDT",
+    "ETHUSDT",
+    "FILUSDT",
+    "GMXUSDT",
+    "INJUSDT",
+    "JUPUSDT",
+    "LDOUSDT",
+    "NEARUSDT",
+    "OPUSDT",
+    "ORDIUSDT",
+    "PYTHUSDT",
+    "SOLUSDT",
+    "STXUSDT",
+    "TIAUSDT",
+    "TONUSDT",
+    "TRXUSDT",
+    "WIFUSDT"
+  ],
+  "verdict": "REPLICATION: beberapa symbol lolos, perlu verifikasi",
+  "note": "BUKAN mencari alpha - menguji stabilitas kesimpulan negatif"
+}

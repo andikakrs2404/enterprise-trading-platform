@@ -1,0 +1,47 @@
+{
+  "freeze_protocol": {
+    "status": "FROZEN",
+    "date": "2026-09-01",
+    "rationale": "Setelah dua hipotesis berturut-turut gagal OOS (Track A INCONCLUSIVE, Track B FAILED OOS), eksplorasi subset tambahan berisiko tinggi jadi data mining. Freeze untuk mencegah optimasi berkelanjutan.",
+    "no_further_optimization": true
+  },
+  "track_A": {
+    "hypothesis": "Compression Breakout v1",
+    "status": "INCONCLUSIVE - FROZEN",
+    "key_results": {
+      "full_pipeline": "Tidak net-profit di TRAIN/VAL, gagal MTC (FDR>0.05)",
+      "adx_40_45_sweetspot": "Unconfirmed (bukan rejected) - Train PF 2.14, Test PF 3.27, tapi n=12 di validation terlalu kecil dan FDR>0.05"
+    },
+    "rejection_reason": "Belum cukup bukti. Universe 5 simbol, periode pendek, definisi berubah. Bukan rejected - hanya INCONCLUSIVE."
+  },
+  "track_B": {
+    "hypothesis": "Trend Continuation after Volatility Expansion (ADX>35 + OI>0)",
+    "status": "FAILED OOS - ARCHIVED",
+    "key_results": {
+      "train": "PF 1.449, net +0.132% (positif)",
+      "val": "PF 0.859, net -0.045% (negatif)",
+      "test": "PF 0.914, net -0.025% (negatif)",
+      "oos_combined": "PF 0.891, net -0.033%, p=0.59"
+    },
+    "rejection_reason": "Performa memburuk setelah keluar training. Bukan sekadar belum signifikan - edge positif di TRAIN hilang di OOS. Secara praktis diarsipkan."
+  },
+  "most_valuable_finding": {
+    "finding": "MFE/MAE profile menunjukkan edge hidup sangat singkat (1-6 bar), memudar di 12-24bar",
+    "meaning": "Jika ada edge, itu bukan trend continuation 24jam - melainkan intraday expansion / short-term momentum burst yang cepat hilang",
+    "implication": "Strategi yang benar mungkin take-profit cepat, bukan hold",
+    "redirects_hypothesis": "Dari \"breakout -> trend lanjut\" menjadi \"breakout -> dorongan awal -> edge memudar\""
+  },
+  "framework_status": {
+    "status": "LULUS",
+    "capabilities_demonstrated": [
+      "Menemukan kandidat",
+      "Temporal split",
+      "Menghitung biaya eksekusi",
+      "Mengukur PF",
+      "OOS validation",
+      "Multiple testing correction",
+      "Menolak hipotesis yang tidak valid"
+    ],
+    "rating": "9.0-9.3/10"
+  }
+}

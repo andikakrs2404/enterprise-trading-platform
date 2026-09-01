@@ -1,0 +1,190 @@
+{
+  "probability_analysis": {
+    "p_compression": null,
+    "p_baseline_assumed": 0.5,
+    "delta_p": null,
+    "delta_p_95ci": null,
+    "absolute_lift_pp": null,
+    "relative_lift_percent": null,
+    "odds_ratio": null,
+    "p_value": null,
+    "significance": null
+  },
+  "direction_analysis": {
+    "long": {
+      "n": null,
+      "expectancy": null,
+      "gross_return": null,
+      "net_return": null,
+      "ci_95": null,
+      "hit_rate": null,
+      "sufficient": null
+    },
+    "short": {
+      "n": null,
+      "expectancy": null,
+      "gross_return": null,
+      "net_return": null,
+      "ci_95": null,
+      "hit_rate": null,
+      "sufficient": null
+    },
+    "overall": {
+      "n": null,
+      "weighted_expectancy": null
+    }
+  },
+  "mfe_mae_by_horizon": {
+    "forward_1bar": {
+      "mfe": null,
+      "mae": null,
+      "mean_return": null
+    },
+    "forward_3bar": {
+      "mfe": null,
+      "mae": null,
+      "mean_return": null
+    },
+    "forward_6bar": {
+      "mfe": null,
+      "mae": null,
+      "mean_return": null
+    },
+    "forward_12bar": {
+      "mfe": null,
+      "mae": null,
+      "mean_return": null
+    },
+    "forward_24bar": {
+      "mfe": null,
+      "mae": null,
+      "mean_return": null
+    }
+  },
+  "multiple_testing": {
+    "hypotheses_registered": null,
+    "correction_method": null,
+    "adjusted_alpha": null,
+    "raw_p_values": null
+  },
+  "decision_levels": {
+    "INCONCLUSIVE": {
+      "reason": "N terlalu kecil / CI terlalu lebar / insufficient data",
+      "action": "refactor hypothesis / collect more data"
+    },
+    "HYPOTHESIS_SUPPORTED": {
+      "reason": "effect statistically significant, economic significance terlihat",
+      "action": "proceed to OOS/robustness validation"
+    },
+    "ROBUST_CANDIDATE": {
+      "reason": "effect survives OOS, regime, symbol analysis, cost viability",
+      "action": "proceed to production candidate evaluation",
+      "must_pass": [
+        "survives_OOS_validation",
+        "survives_regime_stability",
+        "survives_symbol_stability",
+        "cost_stable_below_threshold",
+        "passes_execution_realism_layer",
+        "passes_walk_forward_validation",
+        "passes_research_bias_adjustment",
+        "within_capacity_limits",
+        "monitored_for_decay"
+      ]
+    },
+    "PRODUCTION_CANDIDATE": {
+      "reason": "robust + economically viable + portfolio value + execution feasible",
+      "action": "ready for Edge #2 development atau production deployment",
+      "must_pass": [
+        "HYPOTHESIS_SUPPORTED",
+        "economic_viable",
+        "portfolio_value_positive",
+        "execution_feasible",
+        "HYPOTHESIS_SUPPORTED",
+        "economic_viable",
+        "portfolio_value_positive",
+        "execution_feasible",
+        "passes_all_p17_sub_layers"
+      ]
+    }
+  },
+  "data_quality": {
+    "synthetic_used": false,
+    "real_data_required": true,
+    "mechanism_test_only": false,
+    "universe_symbols": [],
+    "universe_timeframes": [],
+    "episode_independence": {
+      "raw_events": null,
+      "unique_episodes": null,
+      "effective_sample_size": null,
+      "candle_correlation_accounted": true
+    }
+  },
+  "breakout_definition": {
+    "locked": false,
+    "definition": null,
+    "locked_at": null,
+    "immutable_during_testing": true
+  },
+  "gross_net_separation": {
+    "gross_return": null,
+    "net_return": null,
+    "fees_slippage_estimated": null
+  },
+  "threshold_optimization": {
+    "same_dataset_validation": false,
+    "oos_validation_required": true
+  },
+  "session_registry": {
+    "session_analysis": {
+      "utc_hours": null,
+      "per_session_breakdown": null,
+      "no_session_shopping": true
+    },
+    "regime_analysis": {
+      "adx_buckets": null,
+      "volatility_buckets": null,
+      "per_regime_results": null,
+      "no_regime_shopping": true
+    }
+  },
+  "oos_hierarchy": {
+    "train_percent": 60,
+    "validation_percent": 20,
+    "test_percent": 20,
+    "test_never_touched_before": true,
+    "split_method": "random but stratified by regime and symbol",
+    "prevents_overfitting": true,
+    "purged_walk_forward": true,
+    "rolling_windows": {
+      "train": "most_recent_60_percent",
+      "validation": "middle_20_percent",
+      "test": "latest_20_percent_never_used_before"
+    }
+  },
+  "economic_significance": {
+    "minimum_expectancy": 0,
+    "minimum_net_pf": 1.2,
+    "minimum_annualized_sharpe": 1,
+    "minimum_edge_delta_prob": 0.03,
+    "conditions_met": false,
+    "gross_to_net_calculation": {
+      "gross_return": null,
+      "execution_costs": {
+        "spread": null,
+        "fee": null,
+        "funding": null,
+        "slippage": null,
+        "market_impact": null
+      },
+      "net_return": null
+    }
+  },
+  "sub_layers_reference": {
+    "p17_1_execution_realism": "execution_realism_layer",
+    "p17_2_walk_forward": "walk_forward_layer",
+    "p17_3_research_bias": "research_bias_layer",
+    "p17_4_capacity": "capacity_layer",
+    "p17_5_alpha_monitoring": "alpha_monitoring_layer"
+  }
+}
