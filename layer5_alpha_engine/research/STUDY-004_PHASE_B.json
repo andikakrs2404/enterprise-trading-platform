@@ -1,0 +1,38 @@
+{
+  "study": "STUDY-004-PHASE-B",
+  "preregistered": true,
+  "parent": "STUDY-003",
+  "state": "FUND_LOW+OI_LOW+HIGH_VOL",
+  "H1": {
+    "E_R24_state": 0.3189,
+    "base_uncond": 0.0005,
+    "base_highvol": -0.0221,
+    "base_match": 0.2085,
+    "pass": true
+  },
+  "H2": {
+    "highvol_only_E_R24": -0.0221,
+    "state_E_R24": 0.3189,
+    "delta_pp": 0.341
+  },
+  "H3": {
+    "first": 0.2993,
+    "second": 0.3314,
+    "pass": true
+  },
+  "H4": {
+    "pos_symbols": 30,
+    "total": 39,
+    "pct": 76.9,
+    "sign_test_p": 0.0011,
+    "pass": true
+  },
+  "H5": {
+    "gross_bps": 31.9,
+    "net8": 15.9,
+    "net10": 11.9,
+    "net12": 7.9
+  },
+  "label": "Preregistered Hypothesis Validation \u2014 BUKAN edge/live",
+  "verdict": "PREREGISTERED RESULT (bukan final alpha)"
+}
