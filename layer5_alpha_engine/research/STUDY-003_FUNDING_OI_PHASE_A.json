@@ -1,0 +1,232 @@
+{
+  "study": "STUDY-003-FUNDING-OI-PHASE-A",
+  "status": "EXPLORATORY/NON-ALPHA",
+  "parent": "STUDY-002",
+  "n_symbols": 39,
+  "n_rows": 717518,
+  "n_clean": 714787,
+  "coverage": {
+    "fund_pct": 99.8,
+    "oi_pct": 99.6
+  },
+  "fund_states": {
+    "FUND_LOW": {
+      "n": 231401,
+      "E_R1": 0.0014,
+      "E_R6": 0.0193,
+      "E_R24": 0.0838
+    },
+    "FUND_MID": {
+      "n": 202682,
+      "E_R1": -0.0037,
+      "E_R6": -0.0327,
+      "E_R24": -0.1079
+    },
+    "FUND_HIGH": {
+      "n": 280704,
+      "E_R1": -0.0007,
+      "E_R6": -0.0066,
+      "E_R24": -0.0531
+    }
+  },
+  "3d_states": [
+    {
+      "fd": "FUND_LOW",
+      "oi": "OI_LOW",
+      "pr": "UP",
+      "n": 35992,
+      "R1": -0.0042,
+      "R6": 0.0524,
+      "R12": 0.0944,
+      "R24": 0.1202
+    },
+    {
+      "fd": "FUND_LOW",
+      "oi": "OI_LOW",
+      "pr": "DOWN",
+      "n": 36174,
+      "R1": 0.017,
+      "R6": 0.0501,
+      "R12": 0.1101,
+      "R24": 0.2671
+    },
+    {
+      "fd": "FUND_LOW",
+      "oi": "OI_MID",
+      "pr": "UP",
+      "n": 37271,
+      "R1": -0.0022,
+      "R6": -0.0041,
+      "R12": 0.0104,
+      "R24": 0.0254
+    },
+    {
+      "fd": "FUND_LOW",
+      "oi": "OI_MID",
+      "pr": "DOWN",
+      "n": 37258,
+      "R1": -0.0028,
+      "R6": -0.0078,
+      "R12": 0.0182,
+      "R24": 0.0895
+    },
+    {
+      "fd": "FUND_LOW",
+      "oi": "OI_HIGH",
+      "pr": "UP",
+      "n": 40001,
+      "R1": -0.0048,
+      "R6": 0.0235,
+      "R12": 0.0578,
+      "R24": 0.0128
+    },
+    {
+      "fd": "FUND_LOW",
+      "oi": "OI_HIGH",
+      "pr": "DOWN",
+      "n": 40527,
+      "R1": 0.0044,
+      "R6": 0.0101,
+      "R12": 0.0022,
+      "R24": 0.021
+    },
+    {
+      "fd": "FUND_MID",
+      "oi": "OI_LOW",
+      "pr": "UP",
+      "n": 33714,
+      "R1": -0.0077,
+      "R6": -0.0233,
+      "R12": -0.0617,
+      "R24": -0.1233
+    },
+    {
+      "fd": "FUND_MID",
+      "oi": "OI_LOW",
+      "pr": "DOWN",
+      "n": 33838,
+      "R1": -0.0016,
+      "R6": -0.0539,
+      "R12": -0.0989,
+      "R24": -0.1287
+    },
+    {
+      "fd": "FUND_MID",
+      "oi": "OI_MID",
+      "pr": "UP",
+      "n": 32028,
+      "R1": -0.0019,
+      "R6": -0.0254,
+      "R12": -0.0442,
+      "R24": -0.0828
+    },
+    {
+      "fd": "FUND_MID",
+      "oi": "OI_MID",
+      "pr": "DOWN",
+      "n": 32974,
+      "R1": -0.0049,
+      "R6": -0.0233,
+      "R12": -0.044,
+      "R24": -0.0499
+    },
+    {
+      "fd": "FUND_MID",
+      "oi": "OI_HIGH",
+      "pr": "UP",
+      "n": 32937,
+      "R1": -0.0003,
+      "R6": -0.0395,
+      "R12": -0.0596,
+      "R24": -0.1276
+    },
+    {
+      "fd": "FUND_MID",
+      "oi": "OI_HIGH",
+      "pr": "DOWN",
+      "n": 33354,
+      "R1": -0.0067,
+      "R6": -0.0284,
+      "R12": -0.0406,
+      "R24": -0.1293
+    },
+    {
+      "fd": "FUND_HIGH",
+      "oi": "OI_LOW",
+      "pr": "UP",
+      "n": 46473,
+      "R1": -0.0112,
+      "R6": 0.0102,
+      "R12": -0.0182,
+      "R24": 0.0212
+    },
+    {
+      "fd": "FUND_HIGH",
+      "oi": "OI_LOW",
+      "pr": "DOWN",
+      "n": 47163,
+      "R1": 0.0213,
+      "R6": 0.0253,
+      "R12": 0.0658,
+      "R24": -0.0289
+    },
+    {
+      "fd": "FUND_HIGH",
+      "oi": "OI_MID",
+      "pr": "UP",
+      "n": 46219,
+      "R1": -0.0068,
+      "R6": -0.0208,
+      "R12": -0.0806,
+      "R24": -0.0957
+    },
+    {
+      "fd": "FUND_HIGH",
+      "oi": "OI_MID",
+      "pr": "DOWN",
+      "n": 46960,
+      "R1": -0.0019,
+      "R6": -0.0098,
+      "R12": -0.0265,
+      "R24": -0.1551
+    },
+    {
+      "fd": "FUND_HIGH",
+      "oi": "OI_HIGH",
+      "pr": "UP",
+      "n": 44465,
+      "R1": 0.0005,
+      "R6": -0.008,
+      "R12": -0.046,
+      "R24": 0.0157
+    },
+    {
+      "fd": "FUND_HIGH",
+      "oi": "OI_HIGH",
+      "pr": "DOWN",
+      "n": 45461,
+      "R1": -0.0066,
+      "R6": -0.0345,
+      "R12": -0.0489,
+      "R24": -0.069
+    }
+  ],
+  "negative_findings": [
+    "Mayoritas state dekat 0",
+    "Funding HIGH negatif",
+    "OI tidak directional",
+    "Dispersion besar",
+    "Temporal instability",
+    "Belum ada state robust untuk Phase B"
+  ],
+  "phase_b_candidates": [],
+  "guardrails": [
+    "coverage_gate",
+    "no_pool_mean",
+    "dispersion",
+    "funding_percentile",
+    "negative_findings",
+    "unregistered"
+  ],
+  "label": "Observed Phenomenon (Unregistered) \u2014 Bukan alpha"
+}
