@@ -1,0 +1,39 @@
+{
+  "study": "STUDY-005-OOS-VALIDATION",
+  "parent": "STUDY-004",
+  "state": "FUND_LOW+OI_LOW+HIGH_VOL",
+  "frozen": true,
+  "split": {
+    "train": "Jul2024-Jun2025",
+    "val": "Jul2025-Dec2025",
+    "test": "Jan2026-Aug2026"
+  },
+  "primary": {
+    "train": {
+      "n": 34164,
+      "E_R24": 0.3411,
+      "%pos_sym": 76.9
+    },
+    "val": {
+      "n": 6813,
+      "E_R24": 0.4855,
+      "%pos_sym": 81.8
+    },
+    "test": {
+      "n": 1796,
+      "E_R24": -0.7351,
+      "%pos_sym": 21.4
+    }
+  },
+  "tertiary": {
+    "test_pos_sym": "3",
+    "test_total_sym": 14,
+    "test_median": -0.4091,
+    "test_IQR": [
+      -1.304,
+      -0.1262
+    ]
+  },
+  "verdict": "NOT SURVIVED OOS",
+  "label": "OOS Validation \u2014 Bukan edge/live. Frozen state, zero optimization."
+}
