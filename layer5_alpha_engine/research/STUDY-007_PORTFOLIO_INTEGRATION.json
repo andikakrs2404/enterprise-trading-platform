@@ -1,0 +1,62 @@
+{
+  "study": "STUDY-007-PORTFOLIO-INTEGRATION",
+  "parent": "STUDY-006",
+  "fee_bps": 8,
+  "weighting_PRE_FROZEN": {
+    "RSweight": "w=0.5+0.5*rs_rank, direction preserved from baseline",
+    "RS_Standalone": "long top50%, short bottom50%, equal-weight",
+    "rebalance": "per bar (hourly)",
+    "leverage": 1.0,
+    "normalization": "mean over symbols"
+  },
+  "metrics": {
+    "B1_Trend": {
+      "sharpe_ann": -2.83,
+      "maxdd": -0.9891,
+      "net_per_bar_pct": -0.02,
+      "turnover_pct": 24.769
+    },
+    "B2_MeanRev": {
+      "sharpe_ann": -2.59,
+      "maxdd": -0.9792,
+      "net_per_bar_pct": -0.0179,
+      "turnover_pct": 22.133
+    },
+    "B1+RSweight": {
+      "sharpe_ann": -3.26,
+      "maxdd": -0.9765,
+      "net_per_bar_pct": -0.0174,
+      "turnover_pct": 21.765
+    },
+    "B2+RSweight": {
+      "sharpe_ann": -3.12,
+      "maxdd": -0.9652,
+      "net_per_bar_pct": -0.0162,
+      "turnover_pct": 19.85
+    },
+    "RS_Standalone": {
+      "sharpe_ann": -11.3,
+      "maxdd": -0.961,
+      "net_per_bar_pct": -0.017,
+      "turnover_pct": 20.896
+    }
+  },
+  "incremental": {
+    "B1+RSweight_over_B1_Trend": {
+      "corr": 0.995,
+      "d_sharpe": -0.44,
+      "d_maxdd": 0.0126
+    },
+    "B2+RSweight_over_B2_MeanRev": {
+      "corr": 0.995,
+      "d_sharpe": -0.53,
+      "d_maxdd": 0.014
+    }
+  },
+  "guardrails": [
+    "no_posthoc",
+    "net_after_cost",
+    "weighting_pre_frozen"
+  ],
+  "label": "Portfolio Integration Test \u2014 incremental info, bukan edge selection"
+}
