@@ -46,11 +46,21 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 - **Mekanisme:** kombinasi funding & OI state → forward return surface
 - **Matrix:** OI↑/OI↓ × Funding+/Funding− × Price↑/Price↓
 
-### 🔄 7. Cross-sectional Relative Strength (NEXT UP)
-- **Status:** NEXT — siap Phase A
-- **Mekanisme:** relatif strength antar symbol
-- **Keunggulan:** tidak butuh prediksi absolute direction
-- **User preference:** eksplorasi family cross-sectional (momentum, sector rotation, leader-laggard)
+### 🔄 7. Cross-sectional Relative Strength (STUDY-006 — VALIDATED FEATURE)
+- **Type:** Feature / Factor (BUKAN edge)
+- **Direction:** Continuation
+- **Primary horizon:** R24–R48
+- **Gross spread:** +14.8 bps (HIGH-disp: +19.7bps, LOW-disp: +9.9bps)
+- **Dispersion effect:** Positif (amplifikasi HIGH dispersion)
+- **Temporal stability:** PASS (2024: +0.055%, 2025: +0.040%, 2026: +0.385%)
+- **Symbol stability:** 56% (22/39) — marginal
+- **Net-after-cost:** FAIL (gross 14.8bps < fee 16-24bps)
+- **Standalone alpha:** REJECTED
+- **Portfolio role:** CANDIDATE (untuk Portfolio Integration Study)
+- **Status taxonomy:** VALIDATED FEATURE (level 2 dari 4)
+- **Arsip:** `research/STUDY-006_CROSS_SECTIONAL_RS.json`, `STUDY-006_PHASE_B.json`
+- **Keputusan:** FREEZE. Jangan Phase C scoring optimization. Jangan sebut "edge".
+- **Pelajaran:** predictive power ada tapi terlalu kecil untuk membayar turnover → kandidat untuk ranking/weighting posisi edge lain, bukan entry signal.
 
 ### ⬜ 8. Liquidation Cascade
 - **Status:** Kandidat (butuh data liquidation memadai)
