@@ -1,0 +1,39 @@
+{
+  "study": "STUDY-006-PHASE-B",
+  "preregistered": true,
+  "parent": "STUDY-006-PHASE-A",
+  "definitions_frozen": {
+    "momentum": "ret_24h_rank",
+    "disp_hi": "disp>median (frozen)",
+    "Q": "top20/bottom20"
+  },
+  "H1": {
+    "spread": 0.1478,
+    "pass": true
+  },
+  "H2": {
+    "high": 0.1965,
+    "low": 0.0987,
+    "pass": true
+  },
+  "H4": {
+    "pos_symbols": 22,
+    "total": 39,
+    "pct": 56.4
+  },
+  "H5": {
+    "gross_spread_bps": 14.8,
+    "net8_bps": -1.2,
+    "net10_bps": -5.2,
+    "net12_bps": -9.2
+  },
+  "H6_decay": {
+    "R6": 0.0172,
+    "R12": 0.047,
+    "R24": 0.1478,
+    "R48": 0.1642,
+    "R72": 0.065
+  },
+  "label": "Preregistered Hypothesis Validation \u2014 BUKAN edge/live",
+  "verdict": "Phase B preregistered result (bukan final alpha)"
+}
