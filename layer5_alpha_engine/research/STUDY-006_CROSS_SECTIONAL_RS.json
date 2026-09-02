@@ -1,0 +1,9 @@
+{
+  "study": "STUDY-006-CROSS-SECTIONAL-RS",
+  "status": "EXPLORATORY/NON-ALPHA",
+  "n_symbols": 39,
+  "n_rows": 705350,
+  "n_active_ts": 18552,
+  "label": "Observed Phenomenon (Unregistered)",
+  "note": "Phase A ranking-based. Belum ada sector classification. Bukan alpha."
+}
