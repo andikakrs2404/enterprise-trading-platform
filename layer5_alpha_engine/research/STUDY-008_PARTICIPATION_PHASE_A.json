@@ -1,0 +1,23 @@
+{
+  "study": "STUDY-008-RELATIVE-PARTICIPATION-PHASE-A",
+  "status": "EXPLORATORY/NON-ALPHA",
+  "n_symbols": 39,
+  "n_rows": 706644,
+  "features_tested": [
+    "d oi_share_1d",
+    "d oi_share_3d",
+    "d oi_share_7d",
+    "d vol_share_1d",
+    "d vol_share_3d",
+    "d vol_share_7d"
+  ],
+  "horizons": [
+    6,
+    12,
+    24,
+    48,
+    72
+  ],
+  "dispersion_test": true,
+  "label": "Observed Phenomenon (Unregistered)"
+}
