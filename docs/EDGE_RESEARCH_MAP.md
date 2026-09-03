@@ -46,7 +46,12 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 - **Mekanisme:** kombinasi funding & OI state → forward return surface
 - **Matrix:** OI↑/OI↓ × Funding+/Funding− × Price↑/Price↓
 
-### 🔄 7. Cross-sectional Relative Strength (STUDY-006 — VALIDATED FEATURE)
+### ❌ 7b. STUDY-007 — Portfolio Integration (RS incremental value test)
+- **Status:** PORTFOLIO CONTRIBUTION NOT CONFIRMED
+- **Hasil:** Corr(RS,baseline)=0.994 (terlalu tinggi, tidak orthogonal). ΔSharpe < 0.05 (tidak material). RS standalone Sharpe ~0.
+- **Fee sensitivity:** B2_MeanRev (best baseline) saja negatif di 8bps. Seluruh baseline fee-sensitive.
+- **Kesimpulan:** RS tetap VALIDATED FEATURE tetapi TIDAK layak jadi portfolio alpha contributor. Bottleneck: belum ada baseline edge cukup besar untuk survive fee.
+- **Keputusan:** FREEZE. Jangan Phase C scoring/optimization. Pindah family baru.
 - **Type:** Feature / Factor (BUKAN edge)
 - **Direction:** Continuation
 - **Primary horizon:** R24–R48
@@ -62,10 +67,28 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 - **Keputusan:** FREEZE. Jangan Phase C scoring optimization. Jangan sebut "edge".
 - **Pelajaran:** predictive power ada tapi terlalu kecil untuk membayar turnover → kandidat untuk ranking/weighting posisi edge lain, bukan entry signal.
 
-### ⬜ 8. Liquidation Cascade
+### ⬜ 8. Relative Participation / OI Leadership (NEXT CANDIDATE)
+- **Status:** Kandidat utama berikutnya
+- **Mekanisme:** aset yang menarik partisipasi relatif terhadap universe (pangsa OI, volume share, attention share)
+- **Bukan:** level OI/absolute, tapi RELATIVE SHIFT
+- **Perbedaan dari STUDY-003/004/005:** itu funding/OI absolute → gagal OOS. Yang ini relatif.
+
+### ⬜ 9. Volatility Regime Change (Cross-Sectional)
+- **Status:** Kandidat
+- **Mekanisme:** perubahan regime volatilitas antar aset — crypto sering punya edge lebih kuat di sini dari momentum sederhana
+- **Catatan:** STUDY-006 menunjukkan dispersion tinggi → momentum lebih kuat. Ini ekstensi natural.
+
+### ⬜ 10. Cross-Sectional Flow
+- **Status:** Kandidat
+- **Mekanisme:** OI growth rank, volume growth rank, turnover rank → continuation atau reversal?
+- **Perbedaan dari RS harga:** ini menggunakan flow metrics, bukan return
+
+### ⬜ 11. Market Structure (BTC/ETH/Alt Basket)
+- **Status:** Kandidat
+- **Mekanisme:** hubungan BTC→ETH→Alt basket — alpha crypto sering dari struktur pasar
+
+### ⬜ 12. Liquidation Cascade
 - **Status:** Kandidat (butuh data liquidation memadai)
-- **Mekanisme:** cascade → momentum/vanish
-- **Pitfall:** definisi event harus jelas, jangan jadi proxy noise
 
 ---
 
