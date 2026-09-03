@@ -67,11 +67,12 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 - **Keputusan:** FREEZE. Jangan Phase C scoring optimization. Jangan sebut "edge".
 - **Pelajaran:** predictive power ada tapi terlalu kecil untuk membayar turnover → kandidat untuk ranking/weighting posisi edge lain, bukan entry signal.
 
-### ⬜ 8. Relative Participation / OI Leadership (NEXT CANDIDATE)
-- **Status:** Kandidat utama berikutnya
-- **Mekanisme:** aset yang menarik partisipasi relatif terhadap universe (pangsa OI, volume share, attention share)
-- **Bukan:** level OI/absolute, tapi RELATIVE SHIFT
-- **Perbedaan dari STUDY-003/004/005:** itu funding/OI absolute → gagal OOS. Yang ini relatif.
+### ✅ 8. Relative Participation / OI Leadership (STUDY-008)
+- **Status:** ΔOI_share_7d = FROZEN INCONCLUSIVE (regime-emergent). ΔVOL_share_1d = REJECTED (redundant)
+- **Temuan:** ΔOI_share_7d = continuation signal, independent dari Price RS, terkuat LOW dispersion, absent 2024 (+0.02%) → material 2025-26 (+0.96%/+1.03%) [non-overlap]
+- **Taxonomy:** Emergent Conditional Feature (BUKAN alpha)
+- **Revisit:** hanya jika beberapa family independen menunjuk kondisi yang sama → portfolio integration
+- **Arsip:** `STUDY-008_PARTICIPATION_PHASE_A.json`, `STUDY-008_PHASE_B.json`, `STUDY-008C_TEMPORAL.json`, `STUDY-008C_DIAGNOSTIC.json`, `STUDY-008_FREEZE.md`
 
 ### ⬜ 9. Volatility Regime Change (Cross-Sectional)
 - **Status:** Kandidat
