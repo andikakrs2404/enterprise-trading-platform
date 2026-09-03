@@ -1,0 +1,15 @@
+{
+  "study": "STUDY-008-PHASE-B",
+  "preregistered": true,
+  "definitions_frozen": {
+    "vol_share_change_1d": "\u0394(vol_i/vol_total) over 24 bars",
+    "oi_share_change_7d": "\u0394(oi_i/oi_total) over 168 bars",
+    "primary_endpoints": {
+      "VOL": "R24",
+      "OI": "R72"
+    },
+    "fee_bps": 8,
+    "split": "temporal per-symbol 60/20/20"
+  },
+  "label": "Preregistered Hypothesis Validation \u2014 BUKAN edge/live"
+}
