@@ -1,0 +1,41 @@
+{
+  "study": "STUDY-007-REANALYSIS",
+  "parent": "STUDY-006",
+  "horizon": "R24 (aligned with STUDY-006 finding)",
+  "fee_bps": 8,
+  "rebalance": "every 24 bars (realistic)",
+  "weighting_PRE_FROZEN": "w=0.5+0.5*rs_rank for RSweight; long/short top50 for RS",
+  "metrics": {
+    "B1_Trend": {
+      "sharpe": -0.45,
+      "maxdd": -0.7905,
+      "mean_day": -0.0729,
+      "winrate": 48.4
+    },
+    "B2_MeanRev": {
+      "sharpe": 0.48,
+      "maxdd": -0.4734,
+      "mean_day": 0.0772,
+      "winrate": 50.8
+    },
+    "B1+RSweight": {
+      "sharpe": -0.41,
+      "maxdd": -0.6642,
+      "mean_day": -0.0501,
+      "winrate": 47.5
+    },
+    "B2+RSweight": {
+      "sharpe": 0.49,
+      "maxdd": -0.3844,
+      "mean_day": 0.0585,
+      "winrate": 52.6
+    },
+    "RS_Standalone": {
+      "sharpe": 0.08,
+      "maxdd": -0.2972,
+      "mean_day": 0.003,
+      "winrate": 47.0
+    }
+  },
+  "label": "Portfolio Integration Reanalysis \u2014 incremental info at realistic horizon"
+}
