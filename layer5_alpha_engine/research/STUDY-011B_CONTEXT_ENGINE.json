@@ -1,0 +1,46 @@
+{
+  "study": "STUDY-011B-CONTEXT-ENGINE",
+  "preregistered": true,
+  "H1_RS_per_year": {
+    "2024": {
+      "HIGH": -0.35289,
+      "LOW": -0.29091
+    },
+    "2025": {
+      "HIGH": 0.12764,
+      "LOW": -0.07401
+    },
+    "2026": {
+      "HIGH": 1.79889,
+      "LOW": 0.20653
+    }
+  },
+  "H2_OI_per_year": {
+    "2024": {
+      "HIGH": -1.22161,
+      "LOW": -0.53284
+    },
+    "2025": {
+      "HIGH": 0.10573,
+      "LOW": 0.18415
+    },
+    "2026": {
+      "HIGH": 0.17971,
+      "LOW": 0.54925
+    }
+  },
+  "H3_RS_delta": {
+    "train": 0.06445,
+    "val": 0.20967,
+    "test": 2.51865
+  },
+  "H3_OI_delta": {
+    "train": -0.5607,
+    "val": 0.62609,
+    "test": -0.74503
+  },
+  "H1_pass": false,
+  "H2_pass": false,
+  "H3_RS_consistent": true,
+  "H3_OI_consistent": false
+}
