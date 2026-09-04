@@ -74,19 +74,23 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 - **Revisit:** hanya jika beberapa family independen menunjuk kondisi yang sama → portfolio integration
 - **Arsip:** `STUDY-008_PARTICIPATION_PHASE_A.json`, `STUDY-008_PHASE_B.json`, `STUDY-008C_TEMPORAL.json`, `STUDY-008C_DIAGNOSTIC.json`, `STUDY-008_FREEZE.md`
 
-### ⬜ 9. Volatility Regime Change (Cross-Sectional)
-- **Status:** Kandidat
-- **Mekanisme:** perubahan regime volatilitas antar aset — crypto sering punya edge lebih kuat di sini dari momentum sederhana
-- **Catatan:** STUDY-006 menunjukkan dispersion tinggi → momentum lebih kuat. Ini ekstensi natural.
+### ✅ 9. Volatility Regime Change (STUDY-009)
+- **Status:** REJECTED. Vol change = proxy momentum (double-sort hilang), arah berubah 3x (2024 contraction, 2025 flat, 2026 expansion), non-overlap tidak konsisten.
+- **Reanalysis kunci:** "edge muncul 2026" → ternyata "arah fenomena berubah 3 era". Pentingnya non-overlap diakui.
+- **Arsip:** `STUDY-009_VOLREGIME.json`, `run_study009_reanalysis.py`
 
-### ⬜ 10. Cross-Sectional Flow
-- **Status:** Kandidat
-- **Mekanisme:** OI growth rank, volume growth rank, turnover rank → continuation atau reversal?
-- **Perbedaan dari RS harga:** ini menggunakan flow metrics, bukan return
+### ⬜ 10. Cross-Sectional Flow (STUDY-010)
+- **Status:** REJECTED. VOL_growth & OI_growth.
+- **OI_growth:** independen dari Price RS (corr 0.044) tapi temporal INCONSISTENT + net≤0 di 12bps. Observasi: potensi REVERSAL di Price RS neutral (bukan feature).
+- **Volume:** lemah, proxy sebagian.
+- **Arsip:** `STUDY-010_CS_FLOW.json`, `STUDY-010_FREEZE.md`
+- **Insight:** independen ≠ berguna. Cross-sectional anomalies 2-20bps, rapuh vs fee.
 
-### ⬜ 11. Market Structure (BTC/ETH/Alt Basket)
-- **Status:** Kandidat
-- **Mekanisme:** hubungan BTC→ETH→Alt basket — alpha crypto sering dari struktur pasar
+### 🔄 11. Market Structure (STUDY-011 — NEXT, ACTIVE)
+- **Status:** PREREGISTERED — satu-satunya family yang BENAR-BENAR berbeda secara konsep
+- **Mekanisme:** hubungan antar kelompok aset (BTC leadership, ETH vs BTC, alt breadth, dominance shift, capital rotation)
+- **Kenapa beda:** semua STUDY-001..010 di layer atribut coin individual; ini di layer inter-asset relationship
+- **Relevansi:** jika gagal terlalu → pertanyaan besar soal portfolio construction/sizing/regime timing
 
 ### ⬜ 12. Liquidation Cascade
 - **Status:** Kandidat (butuh data liquidation memadai)
