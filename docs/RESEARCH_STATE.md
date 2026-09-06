@@ -5,9 +5,17 @@
 ---
 
 ## CURRENT PHASE
-**STUDY-012 — Portfolio Construction & Economic Viability** (preregistered)
-- Commit reference: `08e8032`
-- State: PREREGISTERED — belum dieksekusi
+**STUDY-012 — Portfolio Construction & Economic Viability** (aktif)
+- Commit reference: `55dd83b` (selection selesai)
+- State: SELECTION SELESAI — hasil menuju REJECTED (lihat ringkas di bawah)
+
+## SELECTION RESULT (ringkas)
+- Q5 RS vs universe: hanya menang di TEST (+59 vs +11 bps gross),
+  NEGATIF di TRAIN (-8 vs +5) dan VAL (-39).
+- Breadth: 68% TEST vs 38% TRAIN → epoch-dependent, bukan skill konsisten.
+- Turnover ~1.5x/rebalance → hancurkan edge kecil.
+- **Verdict sementara: SELECTION TIDAK konsisten — lanjut ke Weighting utk konfirmasi**
+- Detail: `run_study012_selection.py` + `STUDY-012_SELECTION.json`
 
 ## CURRENT HYPOTHESIS
 Can portfolio selection, weighting, sizing, and exposure transform
