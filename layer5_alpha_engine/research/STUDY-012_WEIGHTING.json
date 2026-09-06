@@ -1,0 +1,13 @@
+{
+  "study": "STUDY-012-WEIGHTING",
+  "schemes": [
+    "ew",
+    "rank",
+    "vol",
+    "invvol",
+    "capped"
+  ],
+  "gates": "semua split net@12>0 + to manageable + no single-era",
+  "decomposition": "selection+weighting+interaction",
+  "exposure_diag": true
+}
