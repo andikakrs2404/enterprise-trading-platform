@@ -6,16 +6,28 @@
 
 ## CURRENT PHASE
 **STUDY-012 — Portfolio Construction & Economic Viability** (aktif)
-- Commit reference: `55dd83b` (selection selesai)
-- State: SELECTION SELESAI — hasil menuju REJECTED (lihat ringkas di bawah)
+- Commit reference: `9c198cb`
+- State: SELECTION REJECTED. WEIGHTING SELESAI — semua skema FAIL gate.
 
 ## SELECTION RESULT (ringkas)
-- Q5 RS vs universe: hanya menang di TEST (+59 vs +11 bps gross),
-  NEGATIF di TRAIN (-8 vs +5) dan VAL (-39).
-- Breadth: 68% TEST vs 38% TRAIN → epoch-dependent, bukan skill konsisten.
-- Turnover ~1.5x/rebalance → hancurkan edge kecil.
-- **Verdict sementara: SELECTION TIDAK konsisten — lanjut ke Weighting utk konfirmasi**
-- Detail: `run_study012_selection.py` + `STUDY-012_SELECTION.json`
+- Q5 RS vs universe: hanya menang di TEST (+59 vs +11 bps gross), NEGATIF TRAIN/VAL.
+- Breadth 68% TEST vs 38% TRAIN → epoch-dependent.
+- Turnover ~1.5x → hancurkan edge.
+- **VERDICT: SELECTION REJECTED/NOT CONFIRMED** (freeze, jangan re-examine)
+
+## WEIGHTING RESULT (ringkas)
+- 5 skema (ew, rank, vol, invvol, capped): SEMUA FAIL gate
+  (TRAIN/VAL net@12 negatif; hanya TEST positif atau nol).
+- Weighting effect kecil (+7-11 bps) vs selection effect (-11 bps) → weighting
+  tidak bisa memperbaiki underlying information yang lemah.
+- Exposure diagnostic: % return dari Q5 flips sign (EW -22% vs rank +26%)
+  → tidak ada allocation skill robust.
+- **VERDICT SEMENTARA: WEIGHTING TIDAK MENAMBAH NILAI — epoch dependence persists**
+- Detail: `run_study012_weighting.py` + `STUDY-012_WEIGHTING.json`
+
+## NEXT
+- Sizing/Exposure (pertanyaan terakhir) → setelah itu keputusan: portfolio layer
+  mampu atau tidak mengubah frozen features menjadi economic edge.
 
 ## CURRENT HYPOTHESIS
 Can portfolio selection, weighting, sizing, and exposure transform
