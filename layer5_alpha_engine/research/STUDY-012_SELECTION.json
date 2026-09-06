@@ -1,0 +1,14 @@
+{
+  "study": "STUDY-012-SELECTION",
+  "phase": "portfolio-construction",
+  "baseline": "equal-weight universe",
+  "selection": "top-Q5 Price RS EW",
+  "horizon": "R24",
+  "non_overlap": "every 24 bar",
+  "fee": [
+    8,
+    12,
+    16
+  ],
+  "verdict_note": "Selection question \u2014 subset of STUDY-012"
+}
