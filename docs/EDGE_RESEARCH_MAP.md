@@ -6,6 +6,42 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 
 ---
 
+## ⛔ DISCOVERY FASE — SELESAI (CUTOFF di STUDY-011B)
+
+**Tanggal:** 2026-09-04
+
+Semua single-feature discovery diuji (11 studi). Hasil agregat:
+- **Tidak ada feature yang menjadi deployable alpha standalone.**
+- Cross-sectional anomalies 2-20bps, rapuh vs 8-16bps fee.
+- Meta-pattern: banyak feature = representasi Relative Strength / regime-switching / multiple-testing artifact.
+- Relatif bertahan lebih baik (RS, OI_share) tapi tidak cukup untuk fee.
+
+**FROZEN FEATURES (input portfolio layer):**
+- Price RS (STUDY-006) — VALIDATED FEATURE
+- ΔOI_share_7d (STUDY-008) — Emergent Conditional Feature
+
+**BUKA FASE BARU: PORTFOLIO CONSTRUCTION & ECONOMIC VIABILITY (STUDY-012)** — berhenti feature mining.
+
+## Roadmap (fase baru)
+
+```
+DISCOVERY (selesai) ──▶ FROZEN FEATURES
+                              │
+                              ▼
+                    PORTFOLIO RESEARCH
+                    ├── Selection
+                    ├── Weighting
+                    └── Sizing
+                              ▼
+                        Regime / Exposure
+                              ▼
+                        NET PORTFOLIO
+                              ▼
+                         OOS VALIDATION
+```
+
+---
+
 ## Katalog Family
 
 ### ✅ 1. Compression Breakout / Momentum (STUDY-001)
@@ -86,13 +122,20 @@ Setiap edge family dievaluasi terhadap pipeline standar (PHASE A phenomenon → 
 - **Arsip:** `STUDY-010_CS_FLOW.json`, `STUDY-010_FREEZE.md`
 - **Insight:** independen ≠ berguna. Cross-sectional anomalies 2-20bps, rapuh vs fee.
 
-### 🔄 11. Market Structure (STUDY-011 — NEXT, ACTIVE)
-- **Status:** PREREGISTERED — satu-satunya family yang BENAR-BENAR berbeda secara konsep
-- **Mekanisme:** hubungan antar kelompok aset (BTC leadership, ETH vs BTC, alt breadth, dominance shift, capital rotation)
-- **Kenapa beda:** semua STUDY-001..010 di layer atribut coin individual; ini di layer inter-asset relationship
-- **Relevansi:** jika gagal terlalu → pertanyaan besar soal portfolio construction/sizing/regime timing
+### 🔄 11. Market Structure (STUDY-011 + 011B)
+- **Status:** STUDY-011 REJECTED (tidak ada market-structure alpha standalone). STUDY-011B REJECTED (breadth belum valid sebagai context engine — multiple-testing illusion).
+- **Breadth:** observasi RS-specific, JANGAN dijadikan feature/regime.
+- **Catatan penting:** STUDY-011B membuktikan framework valid — temuan +0.434% dibunuh setelah validation (cross-check OI_share gagal).
+- **Arsip:** `STUDY-011_MARKET_STRUCTURE.json`, `STUDY-011B_CONTEXT_ENGINE.json`, `STUDY-011B_FAILURE.md`
 
-### ⬜ 12. Liquidation Cascade
+### ⬜ 12. Portfolio Construction & Economic Viability (STUDY-012 — FASE BARU)
+- **Status:** PREREGISTERED — fase portfolio research dimulai
+- **3 pertanyaan:** Selection, Weighting, Sizing/Exposure
+- **Baseline:** Price RS (frozen), bukan random
+- **Starting point:** STUDY-007 POST-MORTEM
+- **Arsip:** `STUDY-012_PREREGISTRATION.md`, `STUDY-007_POSTMORTEM.md`
+
+### ⬜ 13. Liquidation Cascade
 - **Status:** Kandidat (butuh data liquidation memadai)
 
 ---
