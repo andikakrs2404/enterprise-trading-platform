@@ -8,11 +8,12 @@ Dokumentasi kebijakan: `docs/`
 
 ---
 
-## STATUS RINGKAS
+## STATUS RINGKAS (FINAL — program CLOSED)
 
 | Study | Status | Dokumen kunci |
 |-------|--------|---------------|
 | STUDY-001 | FROZEN (INCONCLUSIVE) | `STUDY-001_archive.md` |
+| STUDY-001-MECH | FROZEN (EXPLORATORY) | `STUDY-001_mechanism.json` |
 | STUDY-002 | OBSERVED PHENOMENON (archived) | `STUDY-002_FUNDING_OI_PHASE_A.json` |
 | STUDY-003 | REJECTED | `STUDY-003_FUNDING_OI_PHASE_A.json` |
 | STUDY-004 | REJECTED (Phase B pass, OOS fail) | `STUDY-004_PREREGISTRATION.md`, `STUDY-004_PHASE_B.json` |
@@ -24,7 +25,11 @@ Dokumentasi kebijakan: `docs/`
 | STUDY-010 | REJECTED (OI_growth obs) | `STUDY-010_CS_FLOW.json`, `STUDY-010_FREEZE.md` |
 | STUDY-011 | REJECTED | `STUDY-011_PREREGISTRATION.md`, `STUDY-011_MARKET_STRUCTURE.json` |
 | STUDY-011B | REJECTED (illusion) | `STUDY-011B_CONTEXT_ENGINE.json`, `STUDY-011B_FAILURE.md` |
-| STUDY-012 | **ACTIVE — PREREGISTERED** | `STUDY-012_PREREGISTRATION.md` |
+| STUDY-012 | REJECTED (portfolio layer falsified) | `STUDY-012_FREEZE.md`, `STUDY-012_SELECTION.json`, `STUDY-012_WEIGHTING.json`, `STUDY-012_SIZING_2025.json` |
+| STUDY-013 | INCONCLUSIVE (RS regime-dependent obs) | `STUDY-013_REGIME.json` |
+| STUDY-013B | ROBUSTNESS FAILURE | `STUDY-013B_ROBUSTNESS.json` |
+| STUDY-014 | SUPPORTING EVIDENCE (distribusi berbeda) | `STUDY-014_DISTRIBUTION.json` |
+| STUDY-015 | REJECTED (hard stop) | `STUDY-015_PREREGISTRATION.md`, `STUDY-015_MECHANISM.json` |
 
 ## RUN SCRIPTS (jika perlu re-run)
 - STUDY-006: `run_study006_cross_sectional.py`, `run_study006_phaseB.py`
@@ -33,15 +38,27 @@ Dokumentasi kebijakan: `docs/`
 - STUDY-009: `run_study009_volregime.py`, `run_study009_reanalysis.py`
 - STUDY-010: `run_study010_flow.py`
 - STUDY-011: `run_study011_market_structure.py`, `run_study011B_context.py`
+- STUDY-012: `run_study012_selection.py`, `run_study012_weighting.py`, `run_study012_sizing.py`
+- STUDY-013/013B: `run_study013_regime.py`, `run_study013B_robustness.py`
+- STUDY-014: `run_study014_distribution.py`
+- STUDY-015: `run_study015_mechanism.py`
 
-## DATA
+## DATA (frozen — snapshot riset 2024-2026)
 - `/home/rtk/Bot-Multi-Edge-metrics/data/klines/*.parquet` (39 symbols 1h)
 - `/home/rtk/Bot-Multi-Edge-metrics/data/metrics/*.parquet` (OI, ratio)
 - `/home/rtk/Bot-Multi-Edge-metrics/data/funding/*.parquet`
+- Total: ~211MB, Juli 2024 – Agustus 2026
 
-## POLICIES
-- `docs/EDGE_RESEARCH_MAP.md` — roadmap + katalog family
-- `docs/EDGE_RESEARCH_PLAYBOOK.md` — framework 14-step
+## POLICIES & KESIMPULAN
+- `docs/RESEARCH_EXECUTIVE_SUMMARY.md` — kesimpulan eksekutif (scoped, no deployable alpha)
+- `docs/QUANT_RESEARCH_PLAYBOOK.md` — **methodology reusable (9 bagian + hard-stop)** ⭐
+- `docs/RESEARCH_STATE.md` — status terbaru saja (PROGRAM CLOSED)
 - `docs/CORE_MEMORY.md` — aturan permanen (guardrails)
-- `docs/RESEARCH_STATE.md` — status terbaru saja
+- `docs/EDGE_RESEARCH_MAP.md` — roadmap + katalog family
+- `docs/EDGE_RESEARCH_PLAYBOOK.md` — framework 14-step (legacy)
 - `docs/FAILURE_CASE_001.md` — failure case Funding/OI
+
+## REOPENING CRITERIA (jangan dibuka tanpa ini)
+1. Data material baru (mis. 2027+)
+2. Microstructure lebih kaya (tick/order-flow/liquidation)
+3. Hipotesis kausal baru yang genuine (preregistered, failure criteria di muka)
