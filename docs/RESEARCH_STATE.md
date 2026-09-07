@@ -1,53 +1,54 @@
 # RESEARCH_STATE.md — Status Terbaru (compact)
 
-**Update:** 2026-09-06 | **Fase:** PROGRAM STATUS — NO DEPLOYABLE ALPHA
+**Update:** 2026-09-07 | **Fase:** PROGRAM DITUTUP (hard stop STUDY-015)
 
 ---
 
-## PROGRAM STATUS
-**No deployable alpha found.** Tapi program BERHASIL memfalsifikasi banyak
-hipotesis yang biasanya menjadi "cerita favorit" di crypto quant.
-Ruang pencarian berkurang drastis.
+## PROGRAM STATUS — FINAL
+**NO DEPLOYABLE ALPHA FOUND.** Program riset ditutup secara formal.
 
-## STUDY STATUS (terakhir)
-- STUDY-013: Interesting Observation (RS conditional sign flips per epoch)
-- STUDY-013B: Robustness Failure (VAL fragility, rolling percentile gagal)
-- STUDY-012: Portfolio layer REJECTED (selection/weighting/sizing semua gagal)
-- STUDY-011+011B: Market structure / breadth context REJECTED
+Hard-stop rule (preregistered STUDY-015) terpenuhi: dispersion tidak
+menghasilkan hubungan robust setelah lag, non-overlap, temporal validation.
 
-## SURVIVING HYPOTHESIS (satu-satunya yang layak dikejar)
-Relative Strength bersifat regime-dependent (reversal ↔ continuation),
-tetapi mekanisme regime tersebut BELUM berhasil diidentifikasi secara robust.
+## KESIMPULAN AKHIR
+Dataset crypto perps 2024-2026 yang digunakan:
+- Mengandung berbagai **conditional historical patterns**
+- **TIDAK mengandung mechanism yang cukup stabil** untuk dieksploitasi sebagai alpha.
+- Cross-sectional anomalies umumnya 2-20 bps, rapuh vs 8-16 bps fee.
 
-## SATU PERTANYAAN YANG MASIH LAYAK
-**Apa yang membuat RS berubah dari reversal (2024) menjadi continuation (2026)?**
+## HASIL PER STUDI (final)
+| Study | Status |
+|---|---|
+| 001 | FROZEN (INCONCLUSIVE) |
+| 002-005 | REJECTED (Funding/OI regime inversion) |
+| 006 | VALIDATED FEATURE (Price RS — bukan edge) |
+| 007 | NOT CONFIRMED + POSTMORTEM |
+| 008 | VOL redundant, OI_share_7d Emergent |
+| 009 | REJECTED (proxy + arah berubah) |
+| 010 | REJECTED (OI_growth unstable) |
+| 011 | REJECTED (market structure) |
+| 011B | REJECTED (breadth context illusion) |
+| 012 | REJECTED (portfolio construction) |
+| 013 | INCONCLUSIVE (RS regime-dependent obs) |
+| 013B | ROBUSTNESS FAILURE (definisi rapuh) |
+| 014 | SUPPORTING EVIDENCE (distribusi berbeda) |
+| 015 | REJECTED (dispersion mechanism FAIL) |
 
-Bukan "indikator apa yang mengaktifkan RS?" — itu pertanyaan feature mining.
-Tapi: "apakah 2024 dan 2026 berasal dari distribusi pasar yang BERBEDA?"
-
-Kandidat (belum diuji, hanya observasi):
-- Cross-sectional dispersion level (lebih rendah 2026 vs 2024)
-- Alt average return (2024 +0.28%, 2025 -0.17%, 2026 -0.05%)
-- Kondisi market yang lebih fundamental (bull/bear multi-bulan)
-
-## YANG SUDAH DIFALSIFIKASI (jangan diulang)
-- Funding/OI absolut
-- Volatility change
-- Cross-sectional flow
-- Market structure standalone
+## YANG DIFALSIFIKASI (jangan diulang)
+- Funding/OI absolut, volatility change, cross-sectional flow
+- Market structure standalone, breadth context universal
 - Portfolio weighting/sizing
-- Breadth context engine universal
 - Single-feature discovery (semua family)
-- Threshold optimization
-- Feature engineering baru
+- **Dispersion sebagai regime driver RS (STUDY-015)**
 
-## YANG BELUM BOLEH DILANJUTKAN
-- Feature baru apapun
-- Weighting/sizing baru
-- Portfolio tricks
-- "Optimization" dari STUDY-013
+## OBSERVASI YANG BERTAHAN (bukan edge)
+- Price RS (STUDY-006): validated feature, conditional
+- ΔOI_share_7d (STUDY-008): emergent conditional feature
+- RS directionality flips antar era (STUDY-013/014): didukung distribusi
+  berbeda, tapi mekanisme TIDAK teridentifikasi (STUDY-015 gagal)
 
-## FROZEN FEATURES (input jika ada riset lanjutan)
-- Price RS (STUDY-006) — validated feature
-- ΔOI_share_7d (STUDY-008) — emergent conditional
-- RS regime-dependent observation (STUDY-013) — interesting but NOT validated
+## POTENSI RISET MASA DEPAN (hanya jika data baru)
+- Data 2027+ untuk OOS validation observasi yang bertahan
+- Tick/order-flow data (untuk deteksi flow sejati)
+- Funding/OI regime dengan data lebih panjang
+- **Tidak ada jalur lanjutan di dataset saat ini**
