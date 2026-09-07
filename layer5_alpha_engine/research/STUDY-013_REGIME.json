@@ -1,0 +1,8 @@
+{
+  "study": "STUDY-013",
+  "states": [
+    "breadth_lag",
+    "disp_lag",
+    "trend_lag"
+  ]
+}
