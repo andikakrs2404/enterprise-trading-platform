@@ -1,75 +1,53 @@
 # RESEARCH_STATE.md — Status Terbaru (compact)
 
-**Update:** 2026-09-04 | **Fase:** Portfolio Construction & Economic Viability
+**Update:** 2026-09-06 | **Fase:** PROGRAM STATUS — NO DEPLOYABLE ALPHA
 
 ---
 
-## CURRENT PHASE
-**STUDY-012 — Portfolio Construction & Economic Viability** (SELESAI FORMAL)
-- Commit reference: `0c1b71a`
-- State: Selection REJECTED → Weighting FAIL gate → Sizing TIDAK menambah → **PORTFOLIO LAYER FALSIFIED**
+## PROGRAM STATUS
+**No deployable alpha found.** Tapi program BERHASIL memfalsifikasi banyak
+hipotesis yang biasanya menjadi "cerita favorit" di crypto quant.
+Ruang pencarian berkurang drastis.
 
-## SELECTION RESULT (ringkas)
-- Q5 RS vs universe: hanya menang TEST (+59 vs +11 bps gross), NEGATIF TRAIN/VAL.
-- **VERDICT: SELECTION REJECTED** (epoch-dependent, turnover tinggi)
+## STUDY STATUS (terakhir)
+- STUDY-013: Interesting Observation (RS conditional sign flips per epoch)
+- STUDY-013B: Robustness Failure (VAL fragility, rolling percentile gagal)
+- STUDY-012: Portfolio layer REJECTED (selection/weighting/sizing semua gagal)
+- STUDY-011+011B: Market structure / breadth context REJECTED
 
-## WEIGHTING RESULT (ringkas)
-- 5 skema (ew, rank, vol, invvol, capped): SEMUA FAIL gate.
-- Selection effect -11.3 bps | Weighting effect +7-8 bps | Interaction 0.
-- Exposure: return-dari-Q5 flip sign antar skema → sinyal ≈ noise floor.
-- **VERDICT: WEIGHTING TIDAK MENAMBAH NILAI EKONOMIS**
+## SURVIVING HYPOTHESIS (satu-satunya yang layak dikejar)
+Relative Strength bersifat regime-dependent (reversal ↔ continuation),
+tetapi mekanisme regime tersebut BELUM berhasil diidentifikasi secara robust.
 
-## SIZING RESULT (ringkas)
-- Conditional exposure (rs>0.8 + ret24>median) = TIDAK berbeda dari Q5 EW → no improvement.
-- **VERDICT: SIZING TIDAK MENYELAMATKAN**
+## SATU PERTANYAAN YANG MASIH LAYAK
+**Apa yang membuat RS berubah dari reversal (2024) menjadi continuation (2026)?**
 
-## PENUTUPAN PORTFOLIO LAYER
-Selection + Weighting + Sizing SEMUA TIDAK menghasilkan economic edge robust.
-**Kesimpulan kumulatif: Portfolio construction bukan sumber edge utama.**
+Bukan "indikator apa yang mengaktifkan RS?" — itu pertanyaan feature mining.
+Tapi: "apakah 2024 dan 2026 berasal dari distribusi pasar yang BERBEDA?"
 
-## TEMUAN STRUKTURAL — STUDY-013 (commit `a5834e8`, PARTIAL SUPPORT H1)
+Kandidat (belum diuji, hanya observasi):
+- Cross-sectional dispersion level (lebih rendah 2026 vs 2024)
+- Alt average return (2024 +0.28%, 2025 -0.17%, 2026 -0.05%)
+- Kondisi market yang lebih fundamental (bull/bear multi-bulan)
 
-**RS Regime Directionality: H1 PARTIALLY DIDUKUNG — pertama kali lolos semua gates.**
+## YANG SUDAH DIFALSIFIKASI (jangan diulang)
+- Funding/OI absolut
+- Volatility change
+- Cross-sectional flow
+- Market structure standalone
+- Portfolio weighting/sizing
+- Breadth context engine universal
+- Single-feature discovery (semua family)
+- Threshold optimization
+- Feature engineering baru
 
-Interaction (unconditional RS = +14.8 bps):
-- Breadth: LOW +0.6 bps → HIGH **+28.5 bps** (delta +27.9)
-- Trend: NEG -0.2 bps → POS **+29.7 bps** (delta +29.9)
-- Dispersion: LOW +6.9 → HIGH +22.8 (VAL gagal: -8.3 → perlu investigation)
+## YANG BELUM BOLEH DILANJUTKAN
+- Feature baru apapun
+- Weighting/sizing baru
+- Portfolio tricks
+- "Optimization" dari STUDY-013
 
-Per-year HIGH breadth: 2024 +5.0 | 2025 +24.7 | 2026 +53.6 (SEMUA POSITIF)
-Per-year POS trend: 2024 +6.8 | 2025 +26.0 | 2026 +54.4 (SEMUA POSITIF)
-Per-split HIGH breadth: TRAIN +15.3 | VAL +18.2 | TEST +77.6 (SEMUA POSITIF)
-
-Caveat: TEST 4-5x TRAIN → magnitude masih epoch-dependent
-Status: H1 PARTIAL — OBSERVASI PERLU EX-ANTE VALIDATION (STUDY-013B?)
-Detail: `run_study013_regime.py` + `STUDY-013_REGIME.json`
-
-## CURRENT HYPOTHESIS
-Can portfolio selection, weighting, sizing, and exposure transform
-weak frozen signals into economically viable portfolio-level edge?
-
-## FROZEN FEATURES (input)
-- **Price RS** — validated feature, not standalone alpha (STUDY-006)
-- **ΔOI_share_7d** — emergent conditional feature, inconclusive (STUDY-008)
-- (VOL-share = redundant, jangan dipakai)
-
-## REJECTED (jangan dibuka tanpa hipotesis baru eksplisit)
-- Compression breakout (STUDY-001, INCONCLUSIVE)
-- Funding/OI absolute (STUDY-002-005, regime inversion)
-- RS portfolio integration (STUDY-007, NOT CONFIRMED — postmortem ada)
-- Relative participation VOL (STUDY-008A, redundant)
-- Volatility regime change (STUDY-009, proxy + arah berubah)
-- Cross-sectional flow (STUDY-010, unstable + cost fail)
-- Market structure / breadth context (STUDY-011+011B, illusion)
-
-## NEXT (urutan eksekusi STUDY-012)
-1. Selection — apakah pemilihan Q5 RS konsisten lebih baik dari equal-weight universe?
-2. Weighting — equal vs rank vs vol-scaled vs inverse-vol vs capped (preregistered, no tuning)
-3. Sizing/Exposure — eksposur hanya saat signal kuat + state sesuai (rule ex-ante)
-4. Net portfolio → OOS validation
-
-## PENDING / OBSERVATION
-- ΔOI_share_7d: "emergent conditional feature" — hanya direvisit jika beberapa
-  family independen konvergen ke kondisi yang sama (revisit protocol STUDY-008).
-- OI_growth reversal (STUDY-010): observasi, bukan feature.
-- Breadth RS-specific (STUDY-011B): observasi, jangan dijadikan regime.
+## FROZEN FEATURES (input jika ada riset lanjutan)
+- Price RS (STUDY-006) — validated feature
+- ΔOI_share_7d (STUDY-008) — emergent conditional
+- RS regime-dependent observation (STUDY-013) — interesting but NOT validated
