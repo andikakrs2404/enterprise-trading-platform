@@ -1,0 +1,127 @@
+{
+  "study": "STUDY-001-MECHANISM",
+  "status": "EXPLORATORY/NON-ALPHA",
+  "parent": "STUDY-001",
+  "entry_frozen": true,
+  "n_events": 804,
+  "time_to_peak": {
+    "mfe": {
+      "P25": 2,
+      "P50": 8,
+      "P75": 19,
+      "mean": 10.16
+    },
+    "mae": {
+      "P25": 4,
+      "P50": 14,
+      "P75": 22,
+      "mean": 12.69
+    },
+    "pct_mfe_peak_1to3": 33.5,
+    "pct_mae_peak_1to3": 25.0
+  },
+  "decay_curve": {
+    "1": {
+      "pooled": 0.0985,
+      "long": 0.122,
+      "short": 0.0792
+    },
+    "2": {
+      "pooled": 0.1263,
+      "long": 0.1957,
+      "short": 0.0694
+    },
+    "3": {
+      "pooled": 0.1033,
+      "long": 0.1548,
+      "short": 0.0611
+    },
+    "4": {
+      "pooled": 0.1215,
+      "long": 0.169,
+      "short": 0.0827
+    },
+    "6": {
+      "pooled": 0.0321,
+      "long": 0.1749,
+      "short": -0.0849
+    },
+    "8": {
+      "pooled": 0.0518,
+      "long": 0.2092,
+      "short": -0.077
+    },
+    "12": {
+      "pooled": -0.1378,
+      "long": -0.0445,
+      "short": -0.2142
+    },
+    "18": {
+      "pooled": -0.1962,
+      "long": -0.1516,
+      "short": -0.2328
+    },
+    "24": {
+      "pooled": -0.2792,
+      "long": -0.2836,
+      "short": -0.2757
+    }
+  },
+  "mfe_mae_asymmetry": {
+    "1": {
+      "P25": 0.0,
+      "P50": -0.0,
+      "P75": 0.0,
+      "P90": -0.0,
+      "median_mfe": 0.0,
+      "median_mae": -0.055
+    },
+    "3": {
+      "P25": -0.0,
+      "P50": -0.0,
+      "P75": 0.857,
+      "P90": 3.389,
+      "median_mfe": 0.364,
+      "median_mae": -0.429
+    },
+    "6": {
+      "P25": 0.0,
+      "P50": 0.324,
+      "P75": 1.5,
+      "P90": 4.815,
+      "median_mfe": 0.704,
+      "median_mae": -0.723
+    },
+    "12": {
+      "P25": 0.013,
+      "P50": 0.438,
+      "P75": 2.008,
+      "P90": 7.401,
+      "median_mfe": 1.157,
+      "median_mae": -1.197
+    },
+    "24": {
+      "P25": 0.1,
+      "P50": 0.599,
+      "P75": 2.259,
+      "P90": 7.739,
+      "median_mfe": 1.743,
+      "median_mae": -1.969
+    }
+  },
+  "time_to_reversal": {
+    "dist": {
+      "median": 2,
+      "p25": 1,
+      "p75": 4
+    },
+    "pct_reversal_1to3": 74.0
+  },
+  "conditional_excursion": {
+    "mfe3_pos_n": 518,
+    "mfe3_neg_n": 286,
+    "fwd_6_pos": 0.7766,
+    "fwd_6_neg": -1.3165
+  },
+  "guardrail": "NON-ALPHA - observasi mekanistik, tanpa strategi/deployment"
+}
