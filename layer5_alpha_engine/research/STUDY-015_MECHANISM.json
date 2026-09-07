@@ -1,0 +1,8 @@
+{
+  "study": "STUDY-015",
+  "test1_level": true,
+  "test2_change": true,
+  "test3_persistence": true,
+  "test4_independent": true,
+  "gate": "mechanism criteria A-F"
+}
