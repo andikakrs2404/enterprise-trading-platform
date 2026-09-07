@@ -27,12 +27,22 @@
 Selection + Weighting + Sizing SEMUA TIDAK menghasilkan economic edge robust.
 **Kesimpulan kumulatif: Portfolio construction bukan sumber edge utama.**
 
-## TEMUAN STRUKTURAL 2025 (paling menarik — investigasi)
-- RS spread per tahun: 2024 **-0.33% (REVERSAL)** | 2025 **-0.04% (flat)** | 2026 **+0.40% (continuation)**
-- 2024 = alt bull (avg R24 +0.28%), 2026 = mild bear (-0.05%), 2025 = transition.
-- Dispersion menurun: 0.032 → 0.025 → 0.022.
-- **Hipotesis baru: RS BUKAN alpha universal — regime-specific. Reversal di alt-bull, continuation di mild-bear.**
-- Detail: `run_study012_sizing.py` + `STUDY-012_SIZING_2025.json`
+## TEMUAN STRUKTURAL — STUDY-013 (commit `a5834e8`, PARTIAL SUPPORT H1)
+
+**RS Regime Directionality: H1 PARTIALLY DIDUKUNG — pertama kali lolos semua gates.**
+
+Interaction (unconditional RS = +14.8 bps):
+- Breadth: LOW +0.6 bps → HIGH **+28.5 bps** (delta +27.9)
+- Trend: NEG -0.2 bps → POS **+29.7 bps** (delta +29.9)
+- Dispersion: LOW +6.9 → HIGH +22.8 (VAL gagal: -8.3 → perlu investigation)
+
+Per-year HIGH breadth: 2024 +5.0 | 2025 +24.7 | 2026 +53.6 (SEMUA POSITIF)
+Per-year POS trend: 2024 +6.8 | 2025 +26.0 | 2026 +54.4 (SEMUA POSITIF)
+Per-split HIGH breadth: TRAIN +15.3 | VAL +18.2 | TEST +77.6 (SEMUA POSITIF)
+
+Caveat: TEST 4-5x TRAIN → magnitude masih epoch-dependent
+Status: H1 PARTIAL — OBSERVASI PERLU EX-ANTE VALIDATION (STUDY-013B?)
+Detail: `run_study013_regime.py` + `STUDY-013_REGIME.json`
 
 ## CURRENT HYPOTHESIS
 Can portfolio selection, weighting, sizing, and exposure transform
