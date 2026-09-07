@@ -5,29 +5,34 @@
 ---
 
 ## CURRENT PHASE
-**STUDY-012 — Portfolio Construction & Economic Viability** (aktif)
-- Commit reference: `9c198cb`
-- State: SELECTION REJECTED. WEIGHTING SELESAI — semua skema FAIL gate.
+**STUDY-012 — Portfolio Construction & Economic Viability** (SELESAI FORMAL)
+- Commit reference: `0c1b71a`
+- State: Selection REJECTED → Weighting FAIL gate → Sizing TIDAK menambah → **PORTFOLIO LAYER FALSIFIED**
 
 ## SELECTION RESULT (ringkas)
-- Q5 RS vs universe: hanya menang di TEST (+59 vs +11 bps gross), NEGATIF TRAIN/VAL.
-- Breadth 68% TEST vs 38% TRAIN → epoch-dependent.
-- Turnover ~1.5x → hancurkan edge.
-- **VERDICT: SELECTION REJECTED/NOT CONFIRMED** (freeze, jangan re-examine)
+- Q5 RS vs universe: hanya menang TEST (+59 vs +11 bps gross), NEGATIF TRAIN/VAL.
+- **VERDICT: SELECTION REJECTED** (epoch-dependent, turnover tinggi)
 
 ## WEIGHTING RESULT (ringkas)
-- 5 skema (ew, rank, vol, invvol, capped): SEMUA FAIL gate
-  (TRAIN/VAL net@12 negatif; hanya TEST positif atau nol).
-- Weighting effect kecil (+7-11 bps) vs selection effect (-11 bps) → weighting
-  tidak bisa memperbaiki underlying information yang lemah.
-- Exposure diagnostic: % return dari Q5 flips sign (EW -22% vs rank +26%)
-  → tidak ada allocation skill robust.
-- **VERDICT SEMENTARA: WEIGHTING TIDAK MENAMBAH NILAI — epoch dependence persists**
-- Detail: `run_study012_weighting.py` + `STUDY-012_WEIGHTING.json`
+- 5 skema (ew, rank, vol, invvol, capped): SEMUA FAIL gate.
+- Selection effect -11.3 bps | Weighting effect +7-8 bps | Interaction 0.
+- Exposure: return-dari-Q5 flip sign antar skema → sinyal ≈ noise floor.
+- **VERDICT: WEIGHTING TIDAK MENAMBAH NILAI EKONOMIS**
 
-## NEXT
-- Sizing/Exposure (pertanyaan terakhir) → setelah itu keputusan: portfolio layer
-  mampu atau tidak mengubah frozen features menjadi economic edge.
+## SIZING RESULT (ringkas)
+- Conditional exposure (rs>0.8 + ret24>median) = TIDAK berbeda dari Q5 EW → no improvement.
+- **VERDICT: SIZING TIDAK MENYELAMATKAN**
+
+## PENUTUPAN PORTFOLIO LAYER
+Selection + Weighting + Sizing SEMUA TIDAK menghasilkan economic edge robust.
+**Kesimpulan kumulatif: Portfolio construction bukan sumber edge utama.**
+
+## TEMUAN STRUKTURAL 2025 (paling menarik — investigasi)
+- RS spread per tahun: 2024 **-0.33% (REVERSAL)** | 2025 **-0.04% (flat)** | 2026 **+0.40% (continuation)**
+- 2024 = alt bull (avg R24 +0.28%), 2026 = mild bear (-0.05%), 2025 = transition.
+- Dispersion menurun: 0.032 → 0.025 → 0.022.
+- **Hipotesis baru: RS BUKAN alpha universal — regime-specific. Reversal di alt-bull, continuation di mild-bear.**
+- Detail: `run_study012_sizing.py` + `STUDY-012_SIZING_2025.json`
 
 ## CURRENT HYPOTHESIS
 Can portfolio selection, weighting, sizing, and exposure transform
