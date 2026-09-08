@@ -31,6 +31,18 @@ Dokumentasi kebijakan: `docs/`
 | STUDY-014 | SUPPORTING EVIDENCE (distribusi berbeda) | `STUDY-014_DISTRIBUTION.json` |
 | STUDY-015 | REJECTED (hard stop) | `STUDY-015_PREREGISTRATION.md`, `STUDY-015_MECHANISM.json` |
 
+## PROGRAM BARU — MICROSTRUCTURE SCALPING (016-022)
+
+| Study | Topik | Status |
+|-------|-------|--------|
+| STUDY-016 | Data & Protocol | **PREREGISTERED** — `STUDY-016_PROTOCOL.md` |
+| STUDY-017 | Trade Flow Phenomena | PLANNED |
+| STUDY-018 | Order Book Phenomena | PLANNED |
+| STUDY-019 | Event Interaction | PLANNED |
+| STUDY-020 | Execution Reality | PLANNED |
+| STUDY-021 | Strategy Construction | PLANNED |
+| STUDY-022 | Replay/Backtest | PLANNED |
+
 ## RUN SCRIPTS (jika perlu re-run)
 - STUDY-006: `run_study006_cross_sectional.py`, `run_study006_phaseB.py`
 - STUDY-007: `run_study007_portfolio_integration.py`, `run_study007_reanalysis.py`
