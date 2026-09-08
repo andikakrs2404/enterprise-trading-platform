@@ -1,0 +1,25 @@
+[Unit]
+Description=STUDY-016A Microstructure Collector (Binance Futures BTCUSDT)
+Documentation=https://github.com/andikakrs2404/enterprise-trading-platform
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=rtk
+WorkingDirectory=/home/rtk/enterprise-trading-platform
+ExecStart=/usr/bin/python3.11 -u /home/rtk/enterprise-trading-platform/layer5_alpha_engine/microstructure/collector/collector_btcusdt_rest.py --symbol BTCUSDT --duration inf
+Restart=always
+RestartSec=10
+# Log persistence
+StandardOutput=append:/var/log/study016a-collector.log
+StandardError=append:/var/log/study016a-collector.err.log
+# Safety
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=false
+# Memory guard (collector keeps buffers small, but protect against leaks)
+MemoryMax=1G
+
+[Install]
+WantedBy=multi-user.target

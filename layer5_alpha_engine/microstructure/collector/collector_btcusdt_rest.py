@@ -178,17 +178,13 @@ class RESTCollector:
     def run(self):
         self.stats['start_ts'] = int(time.time()*1000)
         resumed = self.load_state()
-        print(f"[STUDY-016A v2 REST] Start {self.symbol} collect {self.duration}s (resume={resumed})")
+        print(f"[STUDY-016A v2 REST] Start {self.symbol} collect forever (resume={resumed})", flush=True)
         # initial fetch
         self.fetch_agg(backfill=True)
-        start = time.time()
         last_depth = 0
-        last_bt = 0
         last_flush = 0
-        last_state = 0
-        while time.time() - start < self.duration:
-            # aggTrades every ~2s: 30/min. aggTrades limit is 20/min (2400 weight/min, 1000 rows = 5w)
-            # safer: 3s -> 20/min exactly. Use 3s.
+        while True:
+            # aggTrades every ~3s (20/min limit)
             self.fetch_agg(backfill=True)
             now = time.time()
             if now - last_depth >= self.depth_interval:
@@ -199,18 +195,13 @@ class RESTCollector:
                 self.flush()
                 self.save_state()
                 last_flush = now
-                last_state = now
                 hb = {'t': int(now), 'agg': self.stats['agg_rows'],
                       'depth': self.stats['depth_rows'],
                       'bt': self.stats['bookticker_rows'],
                       'agg_gaps': self.stats['agg_gaps'],
                       'rest_errors': self.stats['rest_errors']}
-                print(f"  HB {hb}")
+                print(f"  HB {hb}", flush=True)
             time.sleep(3.0)  # aggTrades interval (20/min limit)
-        self.flush()
-        self.save_state()
-        self.stats['end_ts'] = int(time.time()*1000)
-        self.write_quality_report()
 
     def write_quality_report(self):
         d = DATA / self.symbol
@@ -242,6 +233,8 @@ def main():
         dur_h = float(a.duration.rstrip('h'))
     elif a.duration.endswith('s'):
         dur_h = float(a.duration.rstrip('s'))/3600
+    elif a.duration in ('0', 'inf'):
+        dur_h = float('inf')  # run forever (systemd-managed)
     else:
         dur_h = float(a.duration)
     print(f"REST Collector: {a.symbol}, {dur_h}h, depth {a.depth_interval}s")
