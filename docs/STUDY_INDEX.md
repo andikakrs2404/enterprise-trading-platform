@@ -36,7 +36,9 @@ Dokumentasi kebijakan: `docs/`
 | Study | Topik | Status |
 |-------|-------|--------|
 | STUDY-016 | Data & Protocol | **PREREGISTERED** — `STUDY-016_PROTOCOL.md` |
-| STUDY-017 | Trade Flow Phenomena | PLANNED |
+| STUDY-016A | Collector + Quality | **PASS (conditional)** — collector running 72h, aggTrades zero-gap verified, depth@3.6s acceptable utk trade-flow |
+| STUDY-016B | Economic Feasibility Baseline | **PREREGISTERED + partial** — semua horizon MARJINAL (data 1.38h), final after 72h |
+| STUDY-017 | Trade Flow Phenomena | PLANNED (menunggu 016B final verdict) |
 | STUDY-018 | Order Book Phenomena | PLANNED |
 | STUDY-019 | Event Interaction | PLANNED |
 | STUDY-020 | Execution Reality | PLANNED |
