@@ -1,0 +1,164 @@
+{
+  "symbol": "BTCUSDT",
+  "span_hours": 1.38,
+  "agg_rows": 71740,
+  "fee_taker_rt_bps": 8.0,
+  "fee_maker_rt_bps": 4.0,
+  "horizons": {
+    "5": {
+      "overlap": {
+        "n": 4790,
+        "median_abs_bps": 0.483,
+        "p75_abs_bps": 1.242,
+        "p90_abs_bps": 2.195,
+        "p95_abs_bps": 2.929,
+        "p99_abs_bps": 5.333,
+        "max_abs_bps": 16.516,
+        "mean_abs_bps": 0.845,
+        "median_signed_bps": 0.0,
+        "mean_signed_bps": -0.027,
+        "skew": -0.608,
+        "std_bps": 1.448
+      },
+      "non_overlap": {
+        "n": 958,
+        "median_abs_bps": 0.47,
+        "p75_abs_bps": 1.254,
+        "p90_abs_bps": 2.257,
+        "p95_abs_bps": 3.033,
+        "p99_abs_bps": 5.574,
+        "max_abs_bps": 13.427,
+        "mean_abs_bps": 0.855,
+        "median_signed_bps": 0.0,
+        "mean_signed_bps": -0.028,
+        "skew": -0.445,
+        "std_bps": 1.48
+      },
+      "verdict": "MARJINAL (G3 only)"
+    },
+    "15": {
+      "overlap": {
+        "n": 4780,
+        "median_abs_bps": 1.425,
+        "p75_abs_bps": 2.529,
+        "p90_abs_bps": 4.136,
+        "p95_abs_bps": 5.431,
+        "p99_abs_bps": 7.702,
+        "max_abs_bps": 16.516,
+        "mean_abs_bps": 1.82,
+        "median_signed_bps": -0.013,
+        "mean_signed_bps": -0.091,
+        "skew": 0.043,
+        "std_bps": 2.532
+      },
+      "non_overlap": {
+        "n": 319,
+        "median_abs_bps": 1.412,
+        "p75_abs_bps": 2.526,
+        "p90_abs_bps": 3.96,
+        "p95_abs_bps": 5.249,
+        "p99_abs_bps": 7.889,
+        "max_abs_bps": 9.428,
+        "mean_abs_bps": 1.806,
+        "median_signed_bps": -0.013,
+        "mean_signed_bps": -0.087,
+        "skew": 0.31,
+        "std_bps": 2.51
+      },
+      "verdict": "MARJINAL (G3 only)"
+    },
+    "30": {
+      "overlap": {
+        "n": 4765,
+        "median_abs_bps": 2.036,
+        "p75_abs_bps": 3.779,
+        "p90_abs_bps": 5.885,
+        "p95_abs_bps": 7.341,
+        "p99_abs_bps": 10.156,
+        "max_abs_bps": 17.697,
+        "mean_abs_bps": 2.66,
+        "median_signed_bps": -0.051,
+        "mean_signed_bps": -0.211,
+        "skew": -0.017,
+        "std_bps": 3.516
+      },
+      "non_overlap": {
+        "n": 159,
+        "median_abs_bps": 2.099,
+        "p75_abs_bps": 3.831,
+        "p90_abs_bps": 6.162,
+        "p95_abs_bps": 7.394,
+        "p99_abs_bps": 9.115,
+        "max_abs_bps": 11.652,
+        "mean_abs_bps": 2.687,
+        "median_signed_bps": -0.318,
+        "mean_signed_bps": -0.21,
+        "skew": 0.053,
+        "std_bps": 3.521
+      },
+      "verdict": "MARJINAL (G3 only)"
+    },
+    "60": {
+      "overlap": {
+        "n": 4735,
+        "median_abs_bps": 3.015,
+        "p75_abs_bps": 5.532,
+        "p90_abs_bps": 8.329,
+        "p95_abs_bps": 10.114,
+        "p99_abs_bps": 14.035,
+        "max_abs_bps": 21.319,
+        "mean_abs_bps": 3.822,
+        "median_signed_bps": -0.432,
+        "mean_signed_bps": -0.441,
+        "skew": 0.303,
+        "std_bps": 5.002
+      },
+      "non_overlap": {
+        "n": 79,
+        "median_abs_bps": 3.431,
+        "p75_abs_bps": 5.341,
+        "p90_abs_bps": 7.829,
+        "p95_abs_bps": 9.44,
+        "p99_abs_bps": 12.651,
+        "max_abs_bps": 12.837,
+        "mean_abs_bps": 3.901,
+        "median_signed_bps": -0.939,
+        "mean_signed_bps": -0.393,
+        "skew": 0.271,
+        "std_bps": 4.912
+      },
+      "verdict": "MARJINAL (G3 only)"
+    },
+    "180": {
+      "overlap": {
+        "n": 4615,
+        "median_abs_bps": 4.724,
+        "p75_abs_bps": 8.239,
+        "p90_abs_bps": 11.601,
+        "p95_abs_bps": 14.493,
+        "p99_abs_bps": 19.069,
+        "max_abs_bps": 29.903,
+        "mean_abs_bps": 5.649,
+        "median_signed_bps": -1.729,
+        "mean_signed_bps": -1.254,
+        "skew": 0.517,
+        "std_bps": 7.065
+      },
+      "non_overlap": {
+        "n": 26,
+        "median_abs_bps": 5.546,
+        "p75_abs_bps": 8.438,
+        "p90_abs_bps": 10.602,
+        "p95_abs_bps": 12.063,
+        "p99_abs_bps": 17.381,
+        "max_abs_bps": 19.02,
+        "mean_abs_bps": 6.115,
+        "median_signed_bps": -0.966,
+        "mean_signed_bps": -0.919,
+        "skew": -0.257,
+        "std_bps": 7.379
+      },
+      "verdict": "MARJINAL (G3 only)"
+    }
+  }
+}
