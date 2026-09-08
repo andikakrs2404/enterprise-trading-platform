@@ -1,0 +1,53 @@
+{
+  "history": [
+    {
+      "generated": "2026-09-08 13:34:07.354632+00:00",
+      "agg_rows": 379637,
+      "span_hours": 8.84,
+      "sessions": {
+        "Asia": {
+          "n_trades": 162857,
+          "tps": 13.8,
+          "buy_ratio": 0.4769,
+          "EV10_60s_pct": 3.582,
+          "p95_abs_R60_bps": 9.27
+        },
+        "London": {
+          "n_trades": 216780,
+          "tps": 10.84,
+          "buy_ratio": 0.4807,
+          "EV10_60s_pct": 1.858,
+          "p95_abs_R60_bps": 7.87
+        },
+        "NY": null
+      },
+      "windows_6h": [
+        {
+          "n_trades": 263131,
+          "tps": 12.18,
+          "buy_ratio": 0.4941,
+          "EV10_60s_pct": 2.955,
+          "EV20_60s_pct": 0.154,
+          "p95_abs_R60_bps": 8.76,
+          "median_abs_R60_bps": 2.602,
+          "rv_ann_pct": 28.2,
+          "start": "2026-09-08 04:43:18.342000+00:00",
+          "end": "2026-09-08 10:43:18.342000+00:00"
+        },
+        {
+          "n_trades": 116506,
+          "tps": 11.42,
+          "buy_ratio": 0.4406,
+          "EV10_60s_pct": 1.695,
+          "EV20_60s_pct": 0.061,
+          "p95_abs_R60_bps": 7.92,
+          "median_abs_R60_bps": 2.385,
+          "rv_ann_pct": 28.2,
+          "start": "2026-09-08 10:43:18.342000+00:00",
+          "end": "2026-09-08 16:43:18.342000+00:00"
+        }
+      ],
+      "note": "INTERIM \u2014 bukan keputusan final. Final = STUDY-016B_ECONOMIC.json setelah 72h."
+    }
+  ]
+}
