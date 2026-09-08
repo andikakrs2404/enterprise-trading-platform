@@ -74,7 +74,7 @@ def analyze_depth(dirpath):
     valid = 0
     for _, row in df.iterrows():
         try:
-            if isinstance(row['bids'], list) and len(row['bids']) > 0:
+            if isinstance(row['bids'], (list, np.ndarray)) and len(row['bids']) > 0:
                 valid += 1
         except Exception:
             pass
@@ -100,6 +100,41 @@ def _sample_book(df):
             continue
     return None
 
+def spread_distribution(dirpath):
+    """Compute spread distribution from depth snapshots (bps of mid)."""
+    files = sorted(Path(dirpath).glob("*/depth_*.parquet"))
+    if not files:
+        return None
+    df = pd.concat([pd.read_parquet(f) for f in files], ignore_index=True)
+    spreads_bps = []
+    for _, row in df.iterrows():
+        try:
+            bids, asks = row['bids'], row['asks']
+            if not (isinstance(bids, (list, np.ndarray)) and isinstance(asks, (list, np.ndarray))):
+                continue
+            if len(bids) == 0 or len(asks) == 0:
+                continue
+            bb = float(bids[0][0]); ba = float(asks[0][0])
+            if bb <= 0 or ba <= 0 or ba < bb:
+                continue
+            mid = (bb + ba) / 2
+            spreads_bps.append((ba - bb) / mid * 10000)
+        except Exception:
+            continue
+    if not spreads_bps:
+        return None
+    arr = np.array(spreads_bps)
+    return {
+        'n_snapshots_used': len(arr),
+        'spread_mean_bps': round(float(arr.mean()), 4),
+        'spread_median_bps': round(float(np.median(arr)), 4),
+        'spread_p95_bps': round(float(np.percentile(arr, 95)), 4),
+        'spread_p99_bps': round(float(np.percentile(arr, 99)), 4),
+        'spread_max_bps': round(float(arr.max()), 4),
+        'spread_min_bps': round(float(arr.min()), 4),
+        'spread_std_bps': round(float(arr.std()), 4),
+    }
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--symbol', default='BTCUSDT')
@@ -115,6 +150,9 @@ def main():
     dep = analyze_depth(d)
     report['aggTrades'] = agg
     report['depth'] = dep
+    # spread distribution from depth snapshots
+    spread = spread_distribution(d)
+    report['spread'] = spread
 
     print("\n" + "="*60)
     print("AGGTRADES")
@@ -124,6 +162,13 @@ def main():
             if k != 'gap_samples':
                 print(f"  {k:<22}: {v}")
         print(f"  gaps: {agg['n_gaps']} ({agg['gap_rows']} missing rows) — completeness {agg['completeness_pct']}%")
+
+    print("\n" + "="*60)
+    print("SPREAD DISTRIBUTION (bps of mid)")
+    print("="*60)
+    if spread:
+        for k, v in spread.items():
+            print(f"  {k:<22}: {v}")
 
     print("\n" + "="*60)
     print("DEPTH")
